@@ -217,7 +217,6 @@ section{
     text-align: left;
     justify-content: center;
     font-size: 1.2rem;
-    /* text-transform: uppercase; */
 }
 
 .welcome-heading{
@@ -243,7 +242,6 @@ section{
     width: 50%;
     text-align: left;
     letter-spacing: 1px;
-    /* border: 1px solid; */
 }
 
 .about-skills-list{
@@ -275,7 +273,6 @@ section{
 }
 
 .experience-main{
-    /* max-height: 500px; */
     max-width: 750px;
     width: 75vw;
 }
@@ -290,7 +287,6 @@ section{
     background-color: transparent;
     color: var(--green-trans);
     float: left;
-    /* float: inline-end; */
     outline: none;
     padding: 14px 16px;
     transition: var(--transition);
@@ -306,9 +302,7 @@ section{
 }
 
 .experience-tabcontent {
-    /* display: none; */
     padding: 6px 12px;
-    /* box-shadow: 0 1px 10px; */
     text-align: left;
     letter-spacing: 1px;
 }
@@ -401,7 +395,6 @@ footer a, footer h1, footer p, #copyright{
     padding: 0 10px;
 }
 
-/* done */
 .lower-footer{
     border-top: 1px solid var(--green);
     padding: 1rem;
