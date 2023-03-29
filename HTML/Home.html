@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StevenYam</title>
+    <link rel="stylesheet" href="/CSS/normalize.css" />
+    <link rel="stylesheet" href="/CSS/Style.css" />
+  </head>
+
+  <body class="aria-expanded">
+    <header class="header-main">
+      <div class="header-container">
+        <svg class="header-logo">
+          <path d="m 32.5 6.5 l -15 12.5 l 15 12.5 l -15 12.5 m 7.5 -31.25 l 0 25" stroke="currentColor" fill="currentColor"></path>
+        </svg>
+
+        <button aria-controls="header-navigation-menu" aria-expanded="false" class="header-menu-button">
+          <div class="header-ham">
+            <div class="header-ham-middle"></div>
+          </div>
+        </button>
+
+        <div id="header-navigation-menu" data-visible="false" class="header-list">
+          <ul class="header-links">
+            <li class="header-link-item">
+              <a href="" class="header-link">Home</a>
+            </li>
+            <li class="header-link-item">
+              <a href="#about" class="header-link">About</a>
+            </li>
+            <li class="header-link-item">
+              <a href="#experience" class="header-link">Experience</a>
+            </li>
+            <li class="header-link-item">
+              <a href="#contact" class="header-link">Contact</a>
+            </li>
+            <li>
+              <a id="resume" href="/Images/Resume.pdf" target="_blank" class="resume-button"> resume </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="home" aria-expanded="false">
+        <!-- welcome -->
+        <section class="home-container" id="welcome">
+          <div class="welcome-container">
+            <h2 class="welcome-heading">Hello, My Name is</h2>
+            <h1 class="welcome-heading">Steven Yam</h1>
+            <p class="welcome-heading">Creative Front-End Web Developer</p>
+            <a href="/Images/Resume.pdf" target="_blank" class="welcome-heading resume-button"> resume </a>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="home-container" id="about">
+          <div class="about-heading">
+            <h1 class="heading">About Me</h1>
+          </div>
+          <div class="about-container">
+            <div class="about-main">
+              <p>Welcome to my page!</p>
+              <p>I am an innovative and enthusiast financial technology specialist with excellent logical, analytical, and computational skills. Extensive knowledge in web programming languages and graphic design software. Comprehension in financial management with practical skills in analysis and risk assessment. High-drive and collaborative team player who enjoy working in a team to achieve targets.</p>
+              <p>Currently I am focusing on front-end development and also moblie app development.</p>
+              <p>Here are some of my skills:</p>
+              <ul class="about-skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Swift</li>
+                <li>React</li>
+                <li>React Native</li>
+                <li>SQL</li>
+                <li>C++</li>
+              </ul>
+            </div>
+            <div class="about-pic">
+              <img src="/Images/Self_Profile_Transparent.png" alt="A photo of Steven Yam" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="home-container" id="experience">
+          <div class="experience-haeding">
+            <h1 class="heading">Experience</h1>
+          </div>
+          <div class="experience-main">
+            <!-- https://www.w3schools.com/howto/howto_js_tabs.asp -->
+            <div class="experience-tab">
+              <button class="tablinks" onclick="openTab(event, 'Job1')" id="defaultOpen">IT Technician</button>
+              <button class="tablinks" onclick="openTab(event, 'Job2')">Retail Business Owner</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="Job1" class="experience-tabcontent">
+              <h3>IT Technician (Part Time) || Sky Grand Int. Limited</h3>
+              <p>2018 Mar – 2019 Mar || Hong Kong</p>
+              <ul>
+                <li>Supporting Daily IT incidents, problems, and requests.</li>
+                <li>Diagnosed issues with hardware and software, including computers and database systems.</li>
+                <li>Developed, tested, and deployed IT system and programs.</li>
+              </ul>
+            </div>
+
+            <div id="Job2" class="experience-tabcontent">
+              <h3>Retail Business Owner || Toys and Games Retails</h3>
+              <p>2019 Apr – 2020 Jan || Hong Kong</p>
+              <ul>
+                <li>Introduced and running marketing campaign for the latest products to the potential clients.</li>
+                <li>Maintained the store website with up-to-date products and availabilities.</li>
+                <li>Managed sales process from end to end including inventory management, logistic management, and customer service.</li>
+                <li>Administered financial management of the store including book keeping, budgeting and costing.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="home-container" id="contact">
+          <div class="contact-upper">
+            <h1 class="heading">Contact</h1>
+            <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as poossible</p>
+          </div>
+          <div class="contact-lower">
+            <form class="contact-form" action="https://formsubmit.co/df6fe6dfa9630359171c7e38cb71304b" method="POST">
+              <div class="contact-form-content">
+                <label for="" class="contact-form-label">Name</label>
+                <input required placeholder="Enter Your Name" type="text" name="Name" class="contact-form-input" id="contact-name" />
+              </div>
+              <div class="contact-form-content">
+                <label for="" class="contact-form-label">Email</label>
+                <input required placeholder="Enter Your Email" type="text" name="Email" class="contact-form-input" id="contact-email" />
+              </div>
+              <div class="contact-form-content">
+                <label for="" class="contact-form-label">Message</label>
+                <textarea required placeholder="Enter Your Message" name="Message" class="contact-form-input" id="contact-message" cols="30" rows="10"></textarea>
+              </div>
+              <button class="contact-submit-button">Submit</button>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="upper-footer">
+          <div class="subfooter" id="social">
+            <h1>SOCIAL</h1>
+            <div class="social">
+              <a href="https://www.facebook.com/stevenyam33/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="50" y="30">
+                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path class="social-logo-svg" d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/stevenyam/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="50" y="30">
+                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path class="social-logo-svg" d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/steven-yam/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="50" y="30">
+                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path class="social-logo-svg" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="subfooter" id="intro">
+            <h1>STEVEN YAM</h1>
+            <p>This is my first page that I made to introduce myself.</p>
+          </div>
+        </div>
+        <div class="lower-footer">
+          <span class="copyright">version 1.0 © Copyright 2023. Made by</span>
+          <a href="/HTML/Home.html" target="_blank">Steven Yam</a>
+        </div>
+      </div>
+    </footer>
+    <script src="/JavaScript/expTab.js"></script>
+    <script src="/JavaScript/moblieNav.js" defer></script>
+    <script src="/JavaScript/Nav.js"></script>
+  </body>
+</html>
