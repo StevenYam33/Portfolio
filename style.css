@@ -1,4 +1,3 @@
-
 /* Main */
 
 :root{
@@ -522,7 +521,7 @@ footer a, footer h1, footer p, #copyright{
     body[aria-expanded="true"]{
         overflow: hidden;
     }   
-    
+
     .about-skills-list{
         grid-template-columns: repeat(1, minmax(130px, 200px));;
     }
