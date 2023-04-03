@@ -356,6 +356,7 @@ section{
 
 .contact-form-input:focus{
     outline: 3px solid var(--dark-grey);
+    border-radius: 5px;
 }
 
 textarea{
@@ -518,10 +519,6 @@ footer a, footer h1, footer p, #copyright{
 
 
 @media only screen and (max-width: 280px){
-
-    /* body[aria-expanded="true"]{
-        overflow: hidden;
-    }    */
 
     .about-skills-list{
         grid-template-columns: repeat(1, minmax(130px, 200px));;
