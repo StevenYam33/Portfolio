@@ -352,6 +352,11 @@ section{
     padding: 1rem;
     margin: 1rem 0rem;
     /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-collapse: separate;
 }
 
 .contact-form-input:focus{
