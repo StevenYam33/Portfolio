@@ -254,7 +254,7 @@ section{
 
 .about-skills-list li{
     position: relative;
-    padding-left: 20px;
+    padding-left: 25npx;
     margin-bottom: 10px;
 }
 
@@ -347,16 +347,27 @@ section{
 
 .contact-form-input{
     background-color: var(--green-trans);
-    color: var(--dark-greygrey);
     border: none;
     padding: 1rem;
     margin: 1rem 0rem;
     border-radius: 5px;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--dark-grey-trans);
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--dark-grey-trans);
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--dark-grey-trans);
+}
+
 .contact-form-input:focus{
     outline: none !important;
-    /* border: 3px solid var(--dark-grey); */
     box-shadow: inset 0 0 0 3px var(--dark-grey);
     -webkit-appearance: none;
 }
