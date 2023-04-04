@@ -567,23 +567,23 @@ footer a, footer h1, footer p, #copyright{
 .preload-logo path{
     fill: none;
     stroke: var(--green) ;
-    stroke-width: 2;
+    stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 120;
-    transition: rotate 0.5s ease-in-out 2s
-    ,scale 0.5s ease-in-out 2s ;
-    rotate: 360deg;
-    scale: 100%;
     transform-origin: center;
-    animation: preload 2s;
+    animation:  draw 2000ms, 
+    500ms rotate 2500ms  ease-out;
 }
 
-@keyframes preload {
+@keyframes rotate {
     0%{
-        stroke-dashoffset: 100;
+        rotate: 0deg;
+        scale: 100%;
     }
     100%{
-        stroke-dashoffset: 0;
+        rotate: 360deg;
+        scale: 0%;
+        opacity: 0;
     }
 }
