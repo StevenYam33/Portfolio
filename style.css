@@ -569,10 +569,10 @@ footer a, footer h1, footer p, #copyright{
 
 @-webkit-keyframes hide {
     0%{
-        opacity: 1;
+        -webkit-opacity: 1;
     }
     100%{
-        opacity: 0;
+        -webkit-opacity: 0;
     }
 }
 
@@ -609,13 +609,13 @@ footer a, footer h1, footer p, #copyright{
 
 @-webkit-keyframes rotate {
     0%{
-        rotate: 0deg;
-        scale: 100%;
+        -webkit-rotate: 0deg;
+        -webkit-scale: 100%;
     }
     100%{
-        rotate: 360deg;
-        scale: 0%;
-        opacity: 0;
+        -webkit-rotate: 360deg;
+        -webkit-scale: 0%;
+        -webkit-opacity: 0;
     }
 }
 
