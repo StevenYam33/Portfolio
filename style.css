@@ -26,8 +26,6 @@ html{
 
 body{
     height: 100%;
-    height: fill-available;
-    height: -webkit-fill-available;
     width: 100%;
     background-color: var(--green);
     color: var(--dark-grey);
@@ -220,6 +218,8 @@ section{
 
 .welcome-container{
     height: 100vh;
+    height: fill-available;
+    height: -webkit-fill-available;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -476,6 +476,8 @@ footer a, footer h1, footer p, #copyright{
         right: 0px;
         width: min(65vw, 400px);
         height: 100vh;
+        height: fill-available;
+        height: -webkit-fill-available;
         background: var(--grey);
         transform: translateX(100%);
         transition: var(--transition);
@@ -552,6 +554,8 @@ footer a, footer h1, footer p, #copyright{
 .preloader{
     width: 100vw;
     height: 100vh;
+    height: fill-available;
+    height: -webkit-fill-available;
     background-color: var(--grey);
     overflow: hidden;
     animation: 600ms hide 2500ms;
