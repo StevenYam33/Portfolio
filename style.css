@@ -555,7 +555,7 @@ footer a, footer h1, footer p, #copyright{
     width: 100vw;
     height: 100vh;
     height: fill-available;
-    height: -webkit-fill-available;
+    /* height: -webkit-fill-available; */
     background-color: var(--grey);
     overflow: hidden;
     animation: 600ms hide 2500ms;
