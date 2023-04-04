@@ -26,6 +26,8 @@ html{
 
 body{
     height: 100%;
+    height: fill-available;
+    height: -webkit-fill-available;
     width: 100%;
     background-color: var(--green);
     color: var(--dark-grey);
@@ -548,11 +550,11 @@ footer a, footer h1, footer p, #copyright{
 
 
 .preloader{
- width: 100vw;
- height: 100vh;
- background-color: var(--grey);
- overflow: hidden;
- animation: 600ms hide 2500ms;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--grey);
+    overflow: hidden;
+    animation: 600ms hide 2500ms;
 }
 
 @keyframes hide {
