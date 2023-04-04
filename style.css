@@ -562,6 +562,7 @@ footer a, footer h1, footer p, #copyright{
 .preloader{
     width: 100vw;
     height: 100vh;
+    height: -webkit-fill-available;
     min-height: 100vh;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
