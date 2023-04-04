@@ -564,6 +564,7 @@ footer a, footer h1, footer p, #copyright{
     min-height: fill-available;
     background-color: var(--grey);
     overflow: hidden;
+    -webkit-animation: 600ms hide 2500ms;
     animation: 600ms hide 2500ms;
 }
 
@@ -602,6 +603,8 @@ footer a, footer h1, footer p, #copyright{
     stroke-linejoin: round;
     stroke-dasharray: 120;
     transform-origin: center;
+    -webkit-animation:  draw 2000ms, 
+    800ms rotate 2200ms ease-in-out;
     animation:  draw 2000ms, 
     800ms rotate 2200ms ease-in-out;
 }
