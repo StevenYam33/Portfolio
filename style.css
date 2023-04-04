@@ -567,6 +567,15 @@ footer a, footer h1, footer p, #copyright{
     animation: 600ms hide 2500ms;
 }
 
+@-webkit-keyframes hide {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 @keyframes hide {
     0%{
         opacity: 1;
@@ -595,6 +604,19 @@ footer a, footer h1, footer p, #copyright{
     transform-origin: center;
     animation:  draw 2000ms, 
     800ms rotate 2200ms ease-in-out;
+}
+
+
+@-webkit-keyframes rotate {
+    0%{
+        rotate: 0deg;
+        scale: 100%;
+    }
+    100%{
+        rotate: 360deg;
+        scale: 0%;
+        opacity: 0;
+    }
 }
 
 @keyframes rotate {
