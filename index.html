@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Steven Yam</title>
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico" /> -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="194x194" href="favicon-194x194.png" />
@@ -21,10 +20,10 @@
   </head>
 
   <body class="aria-expanded">
-    <header class="header-main">
+    <header class="header-main hide" id="header">
       <div class="header-container">
         <svg class="header-logo">
-          <path d="m 32.5 6.5 l -15 12.5 l 15 12.5 l -15 12.5 m 7.5 -31.25 l 0 25" stroke="currentColor" fill="currentColor"></path>
+          <path d="m 32.5 6.5 l -15 12.5 l 15 12.5 l -15 12.5 m 7.5 -31.25 l 0 25" stroke="currentColor"></path>
         </svg>
 
         <button aria-controls="header-navigation-menu" aria-expanded="false" class="header-menu-button">
@@ -55,7 +54,14 @@
       </div>
     </header>
     <main>
-      <section id="home" aria-expanded="false">
+      <!-- Preloader -->
+      <section class="preloader" id="preloader">
+        <svg class="preload-logo" viewBox="0 0 100 100" width="250" y="250">
+          <path d="m 65 13 l -30 25 l 30 25 l -30 25 m 15 -62.5 l 0 50" stroke="currentColor"></path>
+        </svg>
+      </section>
+
+      <section class="hide" id="home" aria-expanded="false">
         <!-- welcome -->
         <section class="home-container" id="welcome">
           <div class="welcome-container">
@@ -167,7 +173,7 @@
         </section>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="footer-main hide" id="footer">
       <div class="footer-container">
         <div class="upper-footer">
           <div class="subfooter" id="social">
@@ -210,6 +216,7 @@
         </div>
       </div>
     </footer>
+    <script src="preloader.js"></script>
     <script src="exp_tab.js"></script>
     <script src="nav_mobile.js" defer></script>
     <script src="nav_hidden.js"></script>

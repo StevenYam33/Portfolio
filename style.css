@@ -14,6 +14,12 @@
     --ham-gap: -6px;
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -38,6 +44,7 @@ li{
 
 p{
     color: var(--grey);
+    margin: 1rem 0;
 }
 
 button{
@@ -74,7 +81,7 @@ button{
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 100;
-    animation: draw 5s;
+    animation: draw 3s;
 }
 
 @keyframes draw {
@@ -254,7 +261,7 @@ section{
 
 .about-skills-list li{
     position: relative;
-    padding-left: 25npx;
+    padding-left: 25px;
     margin-bottom: 10px;
 }
 
@@ -537,4 +544,46 @@ footer a, footer h1, footer p, #copyright{
         grid-template-columns: repeat(1, minmax(130px, 200px));;
     }
 
+}
+
+
+.preloader{
+ width: 100vw;
+ height: 100vh;
+ background-color: var(--grey);
+ overflow: hidden;
+}
+
+.hide{
+    display: none;
+    opacity: 0;
+}
+
+.preload-logo{
+    width: 200px;
+    height: 100%;
+}
+
+.preload-logo path{
+    fill: none;
+    stroke: var(--green) ;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 120;
+    transition: rotate 0.5s ease-in-out 2s
+    ,scale 0.5s ease-in-out 2s ;
+    rotate: 360deg;
+    scale: 100%;
+    transform-origin: center;
+    animation: preload 2s;
+}
+
+@keyframes preload {
+    0%{
+        stroke-dashoffset: 100;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
 }
