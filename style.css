@@ -552,11 +552,20 @@ footer a, footer h1, footer p, #copyright{
  height: 100vh;
  background-color: var(--grey);
  overflow: hidden;
+ animation: 600ms hide 2500ms;
+}
+
+@keyframes hide {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 .hide{
     display: none;
-    opacity: 0;
 }
 
 .preload-logo{
@@ -573,7 +582,7 @@ footer a, footer h1, footer p, #copyright{
     stroke-dasharray: 120;
     transform-origin: center;
     animation:  draw 2000ms, 
-    500ms rotate 2500ms  ease-out;
+    800ms rotate 2200ms ease-in-out;
 }
 
 @keyframes rotate {
