@@ -234,6 +234,10 @@ section{
     animation: bounce 1500ms ease-in-out infinite;
 }
 
+.scroll-container span{
+    margin-bottom: -10px;
+}
+
 .scroll-container svg{
     margin: auto;
 }
