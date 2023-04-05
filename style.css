@@ -238,7 +238,7 @@ section{
 .scoll-container{
     position: absolute;
     left: calc(var(--home-width) / 2);
-    bottom: 5%;
+    bottom: 0%;
     display: flex;
     flex-direction: column;
     animation: bounce 1500ms ease-in-out infinite;
