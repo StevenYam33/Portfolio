@@ -83,12 +83,12 @@ button{
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 100;
-    animation: draw 3s;
+    animation: draw 3s infinite;
 }
 
 @keyframes draw {
     0%{
-    stroke-dashoffset: 100;
+        stroke-dashoffset: 100;
     }
     100%{
         stroke-dashoffset: 0;
@@ -614,18 +614,31 @@ footer a, footer h1, footer p, #copyright{
     stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-dasharray: 120;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
     transform-origin: center;
-    animation:  draw 2000ms, 
-    800ms rotate 2200ms ease-in-out;
+}
+
+
+#logo-s{
+    animation: draw2 1.25s forwards, 
+    800ms rotate 2200ms ease-in-out ;
+}
+
+#logo-y{
+    animation: draw2 1s 1.25s forwards, 
+    800ms rotate 2200ms ease-in-out ;
+}
+
+@keyframes draw2 {
+    to {
+        stroke-dasharray: 120;
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-        scale: 100%;
-    }
-    100%{
+    to {
         transform: rotate(360deg);
         scale: 0%;
         opacity: 0;
