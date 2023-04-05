@@ -83,16 +83,6 @@ button{
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 100;
-    animation: draw 3s infinite;
-}
-
-@keyframes draw {
-    0%{
-        stroke-dashoffset: 100;
-    }
-    100%{
-        stroke-dashoffset: 0;
-    }
 }
 
 .header-menu-button{
@@ -621,16 +611,16 @@ footer a, footer h1, footer p, #copyright{
 
 
 #logo-s{
-    animation: draw2 1.25s forwards, 
-    800ms rotate 2200ms ease-in-out ;
+    animation: draw 1.25s forwards, 
+    800ms rotate 2200ms ease-in-out;
 }
 
 #logo-y{
-    animation: draw2 1s 1.25s forwards, 
-    800ms rotate 2200ms ease-in-out ;
+    animation: draw 1s 1.25s forwards, 
+    800ms rotate 2200ms ease-in-out;
 }
 
-@keyframes draw2 {
+@keyframes draw {
     to {
         stroke-dasharray: 120;
         stroke-dashoffset: 0;
@@ -638,7 +628,10 @@ footer a, footer h1, footer p, #copyright{
 }
 
 @keyframes rotate {
-    to {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
         transform: rotate(360deg);
         scale: 0%;
         opacity: 0;
