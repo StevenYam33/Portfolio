@@ -194,6 +194,73 @@ button{
     transition: var(--transition);
 }
 
+/* Preloader */
+
+
+.preloader{
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    background-color: var(--grey);
+    overflow: hidden;
+    animation: 600ms hide 2500ms linear;
+}
+
+@keyframes hide {
+    100%{
+        opacity: 0;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.preload-logo{
+    width: 200px;
+    height: 100%;
+}
+
+.preload-logo path{
+    fill: none;
+    stroke: var(--green) ;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transform-origin: center;
+}
+
+
+#logo-s{
+    animation: draw 1.25s forwards, 
+    800ms rotate 2200ms ease-in-out;
+}
+
+#logo-y{
+    animation: draw 1s 1.25s forwards, 
+    800ms rotate 2200ms ease-in-out;
+}
+
+@keyframes draw {
+    100% {
+        stroke-dasharray: 120;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        scale: 0%;
+        opacity: 0;
+    }
+}
+
 /* Main */
 
 section{
@@ -243,15 +310,9 @@ section{
 }
 
 @keyframes bounce {
-    /* 0%{
-        transform: translateY(0px);
-    } */
     50%{
         transform: translateY(10px);
     }
-    /* 100%{
-        transform: translateY(0px);
-    } */
 }
 
 #about, #experience, #contact{
@@ -472,7 +533,6 @@ footer a, footer h1, footer p, #copyright{
     fill: var(--dark-grey);
 }
 
-/* https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
 @media only screen and (max-width: 850px){
     
     body[aria-expanded="true"]{
@@ -572,72 +632,4 @@ footer a, footer h1, footer p, #copyright{
         grid-template-columns: repeat(1, minmax(130px, 200px));;
     }
 
-}
-
-
-.preloader{
-    width: 100vw;
-    height: 100vh;
-    height: 100svh;
-    background-color: var(--grey);
-    overflow: hidden;
-    animation: 600ms hide 2500ms linear;
-}
-
-@keyframes hide {
-    /* 0%{
-        opacity: 1;
-    } */
-    100%{
-        opacity: 0;
-    }
-}
-
-.hide{
-    display: none;
-}
-
-.preload-logo{
-    width: 200px;
-    height: 100%;
-}
-
-.preload-logo path{
-    fill: none;
-    stroke: var(--green) ;
-    stroke-width: 3;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    transform-origin: center;
-}
-
-
-#logo-s{
-    animation: draw 1.25s forwards, 
-    800ms rotate 2200ms ease-in-out;
-}
-
-#logo-y{
-    animation: draw 1s 1.25s forwards, 
-    800ms rotate 2200ms ease-in-out;
-}
-
-@keyframes draw {
-    100% {
-        stroke-dasharray: 120;
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-        scale: 0%;
-        opacity: 0;
-    }
 }
