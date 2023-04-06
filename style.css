@@ -243,15 +243,15 @@ section{
 }
 
 @keyframes bounce {
-    0%{
-        transform: translatey(0px);
-    }
+    /* 0%{
+        transform: translateY(0px);
+    } */
     50%{
         transform: translateY(10px);
     }
-    100%{
+    /* 100%{
         transform: translateY(0px);
-    }
+    } */
 }
 
 #about, #experience, #contact{
@@ -585,9 +585,9 @@ footer a, footer h1, footer p, #copyright{
 }
 
 @keyframes hide {
-    0%{
+    /* 0%{
         opacity: 1;
-    }
+    } */
     100%{
         opacity: 0;
     }
@@ -625,16 +625,16 @@ footer a, footer h1, footer p, #copyright{
 }
 
 @keyframes draw {
-    to {
+    100% {
         stroke-dasharray: 120;
         stroke-dashoffset: 0;
     }
 }
 
 @keyframes rotate {
-    0%{
+    /* 0%{
         transform: rotate(0deg);
-    }
+    } */
     100% {
         transform: rotate(360deg);
         scale: 0%;
