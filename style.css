@@ -196,7 +196,6 @@ button{
 
 /* Preloader */
 
-
 .preloader{
     width: 100vw;
     height: 100vh;
@@ -232,7 +231,6 @@ button{
     transform-origin: center;
 }
 
-
 #logo-s{
     animation: draw 1.25s forwards, 
     800ms rotate 2200ms ease-in-out;
@@ -260,6 +258,7 @@ button{
         opacity: 0;
     }
 }
+
 
 /* Main */
 
