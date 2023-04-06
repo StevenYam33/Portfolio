@@ -610,7 +610,6 @@ footer a, footer h1, footer p, #copyright{
     stroke-linejoin: round;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    transform: rotate(0deg);
     transform-origin: center;
 }
 
@@ -633,9 +632,9 @@ footer a, footer h1, footer p, #copyright{
 }
 
 @keyframes rotate {
-    /* 0%{
+    0%{
         transform: rotate(0deg);
-    } */
+    }
     100% {
         transform: rotate(360deg);
         scale: 0%;
