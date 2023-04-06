@@ -3,7 +3,7 @@
 const observer = new IntersectionObserver((entries, observer) => {
     
     entries.filter(e => e.isIntersecting).forEach((entry) =>{
-        entry.target.classList.add("scroll");
+        entry.target.classList.add("scrolled");
         observer.unobserve(entry.target);
     });
 

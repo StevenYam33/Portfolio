@@ -272,6 +272,8 @@ section{
 
 .home-container{
     width: var(--home-width);
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .welcome-container{
@@ -633,17 +635,15 @@ footer a, footer h1, footer p, #copyright{
 
 }
 
-.scroll{
-    opacity: 0;
-    transform: translateY(20px);
+.scrolled{
     animation: scroll-in 3s forwards;
 }
 
 @keyframes scroll-in {
-    0%{
+    /* 0%{
         opacity: 0;
         transform: translateY(50px);
-    }
+    } */
     100%{
         opacity: 1;
         transform: translateY(0);
