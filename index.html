@@ -53,7 +53,7 @@
               <a href="#contact" class="header-link" data-value="Contact">Contact</a>
             </li>
             <li>
-              <a id="resume" href="resume.pdf" target="_blank" class="resume-button"> resume </a>
+              <a id="resume" href="resume.pdf" target="_blank" class="resume-button" data-value="resume"> resume </a>
             </li>
           </ul>
         </div>
@@ -77,7 +77,7 @@
             <h2 class="welcome-heading">Hello, My Name is</h2>
             <h1 class="welcome-heading">Steven Yam</h1>
             <p class="welcome-heading">Creative Front-End Web Developer</p>
-            <a href="resume.pdf" target="_blank" class="welcome-heading resume-button"> resume </a>
+            <a href="resume.pdf" target="_blank" class="welcome-heading resume-button" data-value="resume"> resume </a>
           </section>
           <div class="scroll-container">
             <span>scroll down</span>
@@ -125,8 +125,8 @@
           <div class="experience-main">
             <!-- https://www.w3schools.com/howto/howto_js_tabs.asp -->
             <div class="experience-tab">
-              <button class="tablinks" onclick="openTab(event, 'Job1')" id="defaultOpen">IT Technician</button>
-              <button class="tablinks" onclick="openTab(event, 'Job2')">Retail Business Owner</button>
+              <button class="tablinks button" onclick="openTab(event, 'Job1')" id="defaultOpen" data-value="IT Technician">IT Technician</button>
+              <button class="tablinks button" onclick="openTab(event, 'Job2')" data-value="Retail Business Owner">Retail Business Owner</button>
             </div>
 
             <!-- Tab Content -->
@@ -182,7 +182,7 @@
                 <label for="" class="contact-form-label">Message</label>
                 <textarea required placeholder="Enter Your Message" name="Message" class="contact-form-input" id="contact-message" cols="30" rows="10"></textarea>
               </div>
-              <button class="contact-submit-button">Submit</button>
+              <button class="contact-submit-button button" data-value="Submit">Submit</button>
             </form>
           </div>
         </section>
