@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
 /* Main */
 
 :root{
@@ -7,6 +9,7 @@
     --grey-trans: rgba(102, 119, 125, 0.75);
     --dark-grey: rgb(78, 88, 89);
     --dark-grey-trans: rgba(78, 88, 89, 0.739);
+    --font-text: 'Fragment Mono', monospace;
     --nav-height: 66px;
     --home-width: 85%;
     --transition: 350ms ease-out;
@@ -31,8 +34,7 @@ body{
     height: 100%;
     background-color: var(--green);
     color: var(--dark-grey);
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-text);
     line-height: 1.5;
     overflow-x: hidden;
 }
