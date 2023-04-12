@@ -49,7 +49,7 @@ li{
 
 p{
     color: var(--grey);
-    margin: 1rem 0;
+    margin: 0 0 1rem  0;
 }
 
 button{
@@ -166,7 +166,8 @@ button{
 }
 
 .header-link, .resume-button{
-    padding: 1.5rem;
+    position: relative;
+    margin: 0 1.2rem;
     letter-spacing: 1px;
     font-weight: 700;
     color: var(--grey);
@@ -175,8 +176,25 @@ button{
 
 .header-link:hover{
     color: var(--dark-grey);
-    color: black;
     transition: var(--transition);
+}
+
+.header-link:hover::after{
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    width: 0;
+    border-bottom: 1.5px solid var(--dark-grey);
+    animation: underline 650ms linear forwards;
+}
+
+@keyframes underline {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
 }
 
 .resume-button{
@@ -325,6 +343,20 @@ section{
     padding: var(--nav-height) 0;
 }
 
+.heading{
+    position: relative !important;
+}
+
+.heading::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2.5px;
+    background: var(--dark-grey);
+    inset: auto 0 0 0;
+    margin: auto;
+}
+
 .about-container{
     width: 100%;
     display: flex;
@@ -422,8 +454,9 @@ section{
     left: 0px;
 }
 
-.contact-lower{
+.contact-main{
     background-color: var(--dark-grey-trans);
+    box-sizing: content-box;
     max-width: 750px;
     max-height: 1500px;
     width: 75%;
@@ -485,6 +518,10 @@ textarea{
     border-radius: 5px;
 }
 
+.contact-submit-button:hover{
+    box-shadow: inset 0 0 0 3px var(--dark-grey);
+}
+
 /* Footer */
 footer{
     background-color: rgb(102, 119, 125);
@@ -543,6 +580,7 @@ footer a, footer h1, footer p, #copyright{
     fill: var(--dark-grey);
 }
 
+/* mobile view */
 @media only screen and (max-width: 850px){
     
     body[aria-expanded="true"]{
