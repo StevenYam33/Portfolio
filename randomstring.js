@@ -26,7 +26,7 @@ headerLinkText.forEach((text) => {
             iterations += 1 / 3;
         }, 30)
 
-    })
+    });
 
 })
 
@@ -54,7 +54,7 @@ button.forEach((text) => {
             iterations += 1.5;
         }, 30)
 
-    })
+    });
 
 })
 
@@ -81,6 +81,6 @@ resumeButton.forEach((text) => {
             iterations += 1 / 2;
         }, 30)
 
-    })
+    });
 
 })

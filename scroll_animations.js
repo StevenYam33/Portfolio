@@ -1,5 +1,3 @@
-// const sections = document.querySelector(".animation");
-
 const observer = new IntersectionObserver((entries, observer) => {
     
     entries.filter(e => e.isIntersecting).forEach((entry) =>{

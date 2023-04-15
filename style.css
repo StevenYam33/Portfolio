@@ -3,12 +3,12 @@
 /* Main */
 
 :root{
-    --green: rgb(189, 209, 197);
-    --green-trans: rgba(189, 209, 197, 0.75);
-    --grey: rgb(102, 119, 125);
-    --grey-trans: rgba(102, 119, 125, 0.75);
-    --dark-grey: rgb(78, 88, 89);
-    --dark-grey-trans: rgba(78, 88, 89, 0.739);
+    --background: rgb(189, 209, 197);
+    --background-trans: rgba(189, 209, 197, 0.75);
+    --text: rgb(102, 119, 125);
+    --text-trans: rgba(102, 119, 125, 0.75);
+    --dark-text: rgb(78, 88, 89);
+    --dark-text-trans: rgba(78, 88, 89, 0.75);
     --font-text: 'Fragment Mono', monospace;
     --nav-height: 66px;
     --home-width: 85%;
@@ -32,8 +32,8 @@ html{
 body{
     width: 100%;
     height: 100%;
-    background-color: var(--green);
-    color: var(--dark-grey);
+    color: var(--dark-text);
+    background-color: var(--background);
     font-family: var(--font-text);
     line-height: 1.5;
     overflow-x: hidden;
@@ -48,8 +48,8 @@ li{
 }
 
 p{
-    color: var(--grey);
-    margin: 0 0 1rem  0;
+    color: var(--text);
+    margin: 0 0 1rem 0;
 }
 
 button{
@@ -60,7 +60,7 @@ button{
 /* Header */
 .header-main{
     width: 100%;
-    background-color: var(--green-trans);
+    background-color: var(--background-trans);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     position: fixed;
@@ -108,7 +108,7 @@ button{
     rotate: 360deg;
     width: var(--ham-width);
     height: var(--ham-height);
-    background-color: var(--dark-grey);
+    background-color: var(--dark-text);
     border-radius: 1px;
     transform-origin: center;
 }
@@ -139,7 +139,7 @@ button{
     top: 0;
     width: var(--ham-width);
     rotate: 45deg;
-    background-color: var(--green);
+    background-color: var(--background);
     transition: 
     top var(--transition), 
     rotate var(--transition) 350ms,
@@ -154,11 +154,17 @@ button{
     bottom: 0;
     width: var(--ham-width);
     rotate: -45deg;
-    background-color: var(--green);
+    background-color: var(--background);
     transition: 
     bottom var(--transition), 
     rotate var(--transition) 350ms,
     background-color var(--transition) 350ms;
+}
+
+.header-list{
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .header-links{
@@ -170,12 +176,12 @@ button{
     margin: 0 1.2rem;
     letter-spacing: 1px;
     font-weight: 700;
-    color: var(--grey);
+    color: var(--text);
     text-transform: uppercase;
 }
 
 .header-link:hover{
-    color: var(--dark-grey);
+    color: var(--dark-text);
     transition: var(--transition);
 }
 
@@ -184,7 +190,7 @@ button{
     position: absolute;
     inset: auto 0 0 0;
     width: 0;
-    border-bottom: 1.5px solid var(--dark-grey);
+    border-bottom: 1.5px solid var(--dark-text);
     animation: underline 650ms linear forwards;
 }
 
@@ -198,15 +204,15 @@ button{
 }
 
 .resume-button{
-    border: 2.5px solid var(--grey);
+    border: 2.5px solid var(--text);
     border-radius: 5px;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1rem;
 }
 
 .resume-button:hover{
-    background-color: var(--grey);
-    color: var(--green);
-    border: 2.5px solid var(--dark-grey);
+    background-color: var(--text);
+    color: var(--background);
+    border: 2.5px solid var(--dark-text);
     transition: var(--transition);
 }
 
@@ -215,13 +221,26 @@ button{
     transition: var(--transition);
 }
 
+.settings-button{
+    cursor: pointer;
+    color: var(--text);
+    height: 27.45px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.settings-button:hover{
+    color: var(--dark-text);
+}
+
 /* Preloader */
 
 .preloader{
     width: 100vw;
     height: 100vh;
     height: 100svh;
-    background-color: var(--grey);
+    background-color: var(--text);
     overflow: hidden;
     animation: 600ms hide 2500ms linear;
 }
@@ -243,7 +262,7 @@ button{
 
 .preload-logo path{
     fill: none;
-    stroke: var(--green) ;
+    stroke: var(--background) ;
     stroke-width: 3;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -352,7 +371,7 @@ section{
     position: absolute;
     width: 50%;
     height: 2.5px;
-    background: var(--dark-grey);
+    background: var(--dark-text);
     inset: auto 0 0 0;
     margin: auto;
 }
@@ -396,7 +415,7 @@ section{
 .about-pic img{
     /* max-width: 30vw; */
     width: 30vw;
-    background-color: var(--dark-grey-trans);
+    background-color: var(--dark-text-trans);
     border-radius: 100%;
     align-items: center;
     box-shadow: 0 0 10px;
@@ -409,13 +428,13 @@ section{
 
 .experience-tab {
     overflow: hidden;
-    background-color: var(--dark-grey-trans);
+    background-color: var(--dark-text-trans);
     box-shadow: 0 1px 10px;
   }
 
 .experience-tab button {
     background-color: transparent;
-    color: var(--green-trans);
+    color: var(--background);
     float: left;
     outline: none;
     padding: 14px 16px;
@@ -424,11 +443,11 @@ section{
 }
 
 .experience-tab button:hover {
-    background-color: var(--grey);
+    background-color: var(--text);
 }
 
 .experience-tab button.active {
-    background-color: var(--dark-grey);
+    background-color: var(--dark-text);
 }
 
 .experience-tabcontent {
@@ -455,7 +474,7 @@ section{
 }
 
 .contact-main{
-    background-color: var(--dark-grey-trans);
+    background-color: var(--dark-text-trans);
     box-sizing: content-box;
     max-width: 750px;
     max-height: 1500px;
@@ -473,11 +492,11 @@ section{
 .contact-form-label{
     text-align: left;
     font-weight: bolder;
-    color: var(--green);
+    color: var(--background);
 }
 
 .contact-form-input{
-    background-color: var(--green-trans);
+    background-color: var(--background-trans);
     border: none;
     padding: 1rem;
     margin: 1rem 0rem;
@@ -485,21 +504,21 @@ section{
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--dark-grey-trans);
+    color: var(--dark-text-trans);
     opacity: 1; /* Firefox */
 }
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--dark-grey-trans);
+    color: var(--dark-text-trans);
 }
   
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--dark-grey-trans);
+    color: var(--dark-text-trans);
 }
 
 .contact-form-input:focus{
     outline: none !important;
-    box-shadow: inset 0 0 0 3px var(--dark-grey);
+    box-shadow: inset 0 0 0 3px var(--dark-text);
     -webkit-appearance: none;
 }
 
@@ -509,8 +528,8 @@ textarea{
 
 .contact-submit-button{
     width: 100%;
-    background-color: var(--green);
-    color: var(--dark-grey);
+    background-color: var(--background);
+    color: var(--dark-text);
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -519,17 +538,17 @@ textarea{
 }
 
 .contact-submit-button:hover{
-    box-shadow: inset 0 0 0 3px var(--dark-grey);
+    box-shadow: inset 0 0 0 3px var(--dark-text);
 }
 
 /* Footer */
 footer{
-    background-color: rgb(102, 119, 125);
-    color: rgb(189, 209, 197);
+    background-color: var(--text);
+    color: var(--background);
 }
 
 footer a, footer h1, footer p, #copyright{
-    color: rgb(189, 209, 197);
+    color: var(--background);
     font-weight:100;
 }
 
@@ -546,7 +565,7 @@ footer a, footer h1, footer p, #copyright{
 }
 
 .lower-footer{
-    border-top: 1px solid var(--green);
+    border-top: 1px solid var(--background);
     padding: 1rem;
     text-align: center;
     margin: auto;
@@ -568,8 +587,8 @@ footer a, footer h1, footer p, #copyright{
 }
 
 .social-logo-svg{
-    stroke: var(--green);
-    fill: var(--green);
+    stroke: var(--background);
+    fill: var(--background);
     stroke-width: 80;
     stroke-opacity: 0;
     transition: var(--transition);
@@ -577,7 +596,7 @@ footer a, footer h1, footer p, #copyright{
 
 .social svg .social-logo-svg:hover{
     transform: translateY(-25px);
-    fill: var(--dark-grey);
+    fill: var(--dark-text);
 }
 
 /* mobile view */
@@ -609,7 +628,7 @@ footer a, footer h1, footer p, #copyright{
         width: min(65vw, 400px);
         height: 100vh;
         height: 100svh;
-        background: var(--grey);
+        background: var(--text);
         transform: translateX(100%);
         transition: var(--transition);
     }
@@ -633,7 +652,7 @@ footer a, footer h1, footer p, #copyright{
     }
     
     .header-links a{
-        color: var(--green);
+        color: var(--background);
     }
 
     .header-links li{
@@ -641,14 +660,20 @@ footer a, footer h1, footer p, #copyright{
     }
 
     .header-links #resume{
-        border: 2.5px solid var(--green);
+        border: 2.5px solid var(--background);
     }
 
     .header-links #resume:hover{
-        background-color: var(--green);
-        color: var(--dark-grey);
+        background-color: var(--background);
+        color: var(--dark-text);
         transition: var(--transition);
-        border: 2.5px solid var(--dark-grey);
+        border: 2.5px solid var(--dark-text);
+    }
+
+    .settings-button{
+        position: absolute;
+        inset: 1.2rem auto 0 1.5rem;
+        color: var(--background);
     }
 
     .about-container{
@@ -682,11 +707,12 @@ footer a, footer h1, footer p, #copyright{
 
 }
 
+/* scroll animation */
 .scrolled{
-    animation: scroll-in 3s forwards;
+    animation: scroll-up 2.5s forwards;
 }
 
-@keyframes scroll-in {
+@keyframes scroll-up {
     /* 0%{
         opacity: 0;
         transform: translateY(50px);
