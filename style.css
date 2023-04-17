@@ -31,6 +31,7 @@ html{
 
 body{
     width: 100%;
+    width: 100svw;
     height: 100%;
     color: var(--text);
     background-color: var(--background);
@@ -565,11 +566,6 @@ footer{
 footer a, footer h1, footer p, #copyright{
     color: var(--background);
     font-weight:100;
-}
-
-.footer-main{
-    width: 100vw;
-    width: 100svw;
 }
 
 .footer-container{
