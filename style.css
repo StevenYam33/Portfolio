@@ -514,6 +514,7 @@ section{
 }
 
 .contact-form-input{
+    color: var(--dark-text);
     background-color: var(--background-trans);
     border: none;
     padding: 1rem;
