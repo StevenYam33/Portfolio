@@ -39,15 +39,15 @@ const getTheme = function() {
         document.documentElement.style.setProperty('--background-trans', 'rgba(102, 119, 125, 0.75)');
         document.documentElement.style.setProperty('--text', 'rgb(189, 209, 197)');
         document.documentElement.style.setProperty('--text-trans', 'rgba(189, 209, 197, 0.75)');
-        document.documentElement.style.setProperty('--dark-text', 'rgb(189, 209, 197)');
-        document.documentElement.style.setProperty('--dark-text-trans', 'rgba(189, 209, 197, 0.75)');
+        document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
+        document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
     } else if (light.classList.contains("hide")) {
         document.documentElement.style.setProperty('--background', 'rgb(189, 209, 197)');
         document.documentElement.style.setProperty('--background-trans', 'rgba(189, 209, 197, 0.75)');
         document.documentElement.style.setProperty('--text', 'rgb(102, 119, 125)');
         document.documentElement.style.setProperty('--text-trans', 'rgba(102, 119, 125, 0.75)');
-        document.documentElement.style.setProperty('--dark-text', ' rgb(78, 88, 89)');
-        document.documentElement.style.setProperty('--dark-text-trans', 'rgba(78, 88, 89, 0.75)');
+        document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
+        document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
     }
 
 };
@@ -79,8 +79,8 @@ lightModeButton.addEventListener('click', () =>{
             document.documentElement.style.setProperty('--background-trans', 'rgba(189, 209, 197, 0.75)');
             document.documentElement.style.setProperty('--text', 'rgb(102, 119, 125)');
             document.documentElement.style.setProperty('--text-trans', 'rgba(102, 119, 125, 0.75)');
-            document.documentElement.style.setProperty('--dark-text', ' rgb(78, 88, 89)');
-            document.documentElement.style.setProperty('--dark-text-trans', 'rgba(78, 88, 89, 0.75)');
+            document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
+            document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
         } else if (light.classList.contains("hide")) {
             console.log('dark');
             light.classList.remove("hide");
@@ -90,8 +90,8 @@ lightModeButton.addEventListener('click', () =>{
             document.documentElement.style.setProperty('--background-trans', 'rgba(102, 119, 125, 0.75)');
             document.documentElement.style.setProperty('--text', 'rgb(189, 209, 197)');
             document.documentElement.style.setProperty('--text-trans', 'rgba(189, 209, 197, 0.75)');
-            document.documentElement.style.setProperty('--dark-text', 'rgb(189, 209, 197)');
-            document.documentElement.style.setProperty('--dark-text-trans', 'rgba(189, 209, 197, 0.75)');
+            document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
+            document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
         }
 
     }, 500);
