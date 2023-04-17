@@ -567,6 +567,11 @@ footer a, footer h1, footer p, #copyright{
     font-weight:100;
 }
 
+.footer-main{
+    width: 100vw;
+    width: 100svw;
+}
+
 .footer-container{
     width: 95vw;
     margin: auto;
