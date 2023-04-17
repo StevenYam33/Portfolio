@@ -31,13 +31,13 @@ html{
 
 body{
     width: 100%;
-    width: 100svw;
     height: 100%;
     color: var(--text);
     background-color: var(--background);
     font-family: var(--font-text);
     line-height: 1.5;
     overflow-x: hidden;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 a{
