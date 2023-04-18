@@ -346,7 +346,6 @@ section{
 }
 
 .welcome-heading-container{
-    /* overflow: hidden; */
     display: flex;
 }
 
@@ -404,8 +403,7 @@ section{
 }
 
 .heading{
-    /* color: var(--dark-text); */
-    position: relative !important;
+    position: relative;
 }
 
 .heading::after{
@@ -720,6 +718,10 @@ footer a, footer h1, footer p, #copyright{
     
     .settings-button{
         color: var(--background);
+    }
+
+    .welcome-heading-container{
+        display: block;
     }
 
     .about-container{
