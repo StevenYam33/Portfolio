@@ -350,15 +350,14 @@ section{
 }
 
 .welcome-heading-title{
-    /* background-color: var(--dark-text); */
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     display: block;
     border-right: 3px solid;
-    animation: blinking 500ms infinite,
+    /* letter-spacing: 2px; */
+    animation: blinking 1000ms infinite,
     type 6000ms steps(var(--word-count)) infinite;
-    /* text-transform: uppercase; */
 }
 
 @keyframes blinking {
@@ -372,7 +371,7 @@ section{
         width: 0;
     }
   }
-
+  
 .scroll-container{
     position: absolute;
     width: 100%;
