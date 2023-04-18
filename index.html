@@ -24,6 +24,7 @@
     <script src="exp_tab.js" defer></script>
     <script src="scroll_animations.js" defer></script>
     <script src="randomstring.js" defer></script>
+    <script src="title.js" defer></script>
   </head>
 
   <body class="aria-expanded">
@@ -43,9 +44,6 @@
 
         <div id="header-navigation-menu" data-visible="false" class="header-list">
           <ul class="header-links">
-            <!-- <li class="header-link-item">
-              <a href="" class="header-link" data-value="Home">Home</a>
-            </li> -->
             <li class="header-link-item">
               <a href="#about" class="header-link" data-value="About">About</a>
             </li>
@@ -85,9 +83,12 @@
         <!-- welcome -->
         <section class="home-container" id="welcome">
           <div class="welcome-container">
-            <h2 class="welcome-heading">Hello, My Name is</h2>
+            <h1 class="welcome-heading">Hello, My Name is</h1>
             <h1 class="welcome-heading">Steven Yam</h1>
-            <p class="welcome-heading">Creative Front-End Web Developer</p>
+            <h1 class="welcome-heading welcome-heading-container">Creative&nbsp;
+                <span class="welcome-heading-title"></span>
+              </span>
+            </h1>
             <a href="resume.pdf" target="_blank" class="welcome-heading resume-button" data-value="resume"> resume </a>
           </section>
           <div class="scroll-container">

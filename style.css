@@ -17,6 +17,7 @@
     --ham-height: 2px;
     --ham-gap: -6px;
     --app-height: 100%;
+    --word-count: 30;
 }
 
 *{
@@ -255,7 +256,8 @@ button{
     height: 100svh;
     background-color: var(--text);
     overflow: hidden;
-    animation: 600ms hide 2500ms linear;
+    animation: 600ms hide linear;
+    animation-delay: 2500ms;
 }
 
 @keyframes hide {
@@ -336,13 +338,41 @@ section{
     align-items: start;
     text-align: left;
     justify-content: center;
-    /* font-size: 1.2rem; */
 }
 
 .welcome-heading{
     font-size: clamp(1.5rem, 1vw, 3rem);
     margin: 16px 0;
 }
+
+.welcome-heading-container{
+    /* overflow: hidden; */
+    display: flex;
+}
+
+.welcome-heading-title{
+    /* background-color: var(--dark-text); */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    border-right: 3px solid;
+    animation: blinking 500ms infinite,
+    type 6000ms steps(var(--word-count)) infinite;
+    /* text-transform: uppercase; */
+}
+
+@keyframes blinking {
+   50%{
+        border-right-color: transparent;
+    }
+  }
+
+  @keyframes type {
+    50%{
+        width: 0;
+    }
+  }
 
 .scroll-container{
     position: absolute;
@@ -429,6 +459,7 @@ section{
     background-color: var(--dark-text-trans);
     box-shadow: 0 0 10px var(--dark-text);
     display: flex;
+    margin: auto;
 }
 
 .experience-main{
