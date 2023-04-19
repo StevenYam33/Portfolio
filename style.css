@@ -346,16 +346,16 @@ section{
 }
 
 .welcome-heading-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .welcome-heading-title{
     width: 100%;
+    border-right: 3px solid;
     white-space: nowrap;
     overflow: hidden;
-    display: block;
-    border-right: 3px solid;
-    /* letter-spacing: 2px; */
+    letter-spacing: 1.5px;
     animation: blinking 1000ms infinite,
     type 6000ms steps(var(--word-count)) infinite;
 }
@@ -371,7 +371,7 @@ section{
         width: 0;
     }
   }
-  
+
 .scroll-container{
     position: absolute;
     width: 100%;
