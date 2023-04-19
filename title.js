@@ -3,8 +3,8 @@ const title = document.querySelector(".welcome-heading-title");
 const titleLoop = function(){
             
     setTimeout (()=>{
-        title.textContent = "Front-End Web Developer";
-        document.documentElement.style.setProperty('--word-count', '23');
+        title.textContent = "Front-End Developer";
+        document.documentElement.style.setProperty('--word-count', '19');
     },3000)
 
     setTimeout(() => {
@@ -13,12 +13,12 @@ const titleLoop = function(){
     },6000);
 
     setTimeout(() => {
-        title.textContent = "Financial Technology Specialist";
-        document.documentElement.style.setProperty('--word-count', '31');
+        title.textContent = "Web Developer";
+        document.documentElement.style.setProperty('--word-count', '13');
     },12000);
     setTimeout(() => {
-        title.textContent = "Front-End Web Developer"
-        document.documentElement.style.setProperty('--word-count', '23');
+        title.textContent = "Front-End Developer"
+        document.documentElement.style.setProperty('--word-count', '19');
     },18000);
 
 };
