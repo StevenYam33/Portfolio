@@ -1,4 +1,4 @@
-const lightModeButton = document.querySelector(".settings-button");
+const themeButton = document.querySelector(".theme-button");
 const themes = document.querySelectorAll(".themes");
 const light = document.querySelector("#light");
 const dark = document.querySelector("#dark");
@@ -20,39 +20,33 @@ const storeTheme = function(theme) {
     localStorage.setItem("CurrentTheme", theme)
 };
 
-// set default theme and change theme
+// set default theme and change theme on load
 const getTheme = function() {
-    const activeTheme = localStorage.getItem("CurrentTheme");
+    const storedTheme = localStorage.getItem("CurrentTheme");
 
-    if (localStorage.getItem("CurrentTheme") == null) {
-        light.classList.add("hide");
-    }
-
-    themes.forEach((themeOption) => {
-        if (themeOption.id === activeTheme){
-            themeOption.classList.add("hide");
+    // set default theme if user prfer dark or not
+    if (storedTheme == null) {
+        if (window.matchMedia("(prefers-color-scheme:dark)").matches === true) {
+            document.documentElement.setAttribute("current-theme", "dark");
+            dark.classList.add("hide");
+            console.log("system dark")
+        } else {
+            document.documentElement.setAttribute("current-theme", "light");
+            light.classList.add("hide");
+            console.log("system light")
         }
+    };
+
+    //  Check and set if local storage matches
+    themes.forEach((themeOption) => {
+        if (themeOption.id === storedTheme){
+            themeOption.classList.add("hide");
+            document.documentElement.setAttribute("current-theme", storedTheme);
+        };
     });
-
-    if (dark.classList.contains("hide")){
-        document.documentElement.style.setProperty('--background', 'rgb(102, 119, 125)');
-        document.documentElement.style.setProperty('--background-trans', 'rgba(102, 119, 125, 0.75)');
-        document.documentElement.style.setProperty('--text', 'rgb(189, 209, 197)');
-        document.documentElement.style.setProperty('--text-trans', 'rgba(189, 209, 197, 0.75)');
-        document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
-        document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
-    } else if (light.classList.contains("hide")) {
-        document.documentElement.style.setProperty('--background', 'rgb(189, 209, 197)');
-        document.documentElement.style.setProperty('--background-trans', 'rgba(189, 209, 197, 0.75)');
-        document.documentElement.style.setProperty('--text', 'rgb(102, 119, 125)');
-        document.documentElement.style.setProperty('--text-trans', 'rgba(102, 119, 125, 0.75)');
-        document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
-        document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
-    }
-
 };
 
-// store theme
+// store theme into locoal storage
 themes.forEach((themeOption) => {
     themeOption.addEventListener("click", ()=> {
         storeTheme(themeOption.id);
@@ -61,37 +55,32 @@ themes.forEach((themeOption) => {
 
 document.onload = getTheme();
 
-// set theme
-lightModeButton.addEventListener('click', () =>{
+// set theme with animations & delay on button clicked
+themeButton.addEventListener("click", () =>{
 
-    lightModeButton.animate(SpinningSmall, 500);
+    themeButton.animate(SpinningSmall, 500);
 
     setTimeout(() => {
 
-        lightModeButton.animate(SpinningBig, 500);
+        themeButton.animate(SpinningBig, 500);
 
         if (dark.classList.contains("hide")){
-            console.log('light');
+
+            console.log("Enter light");
+
             dark.classList.remove("hide");
             light.classList.add("hide");
 
-            document.documentElement.style.setProperty('--background', 'rgb(189, 209, 197)');
-            document.documentElement.style.setProperty('--background-trans', 'rgba(189, 209, 197, 0.75)');
-            document.documentElement.style.setProperty('--text', 'rgb(102, 119, 125)');
-            document.documentElement.style.setProperty('--text-trans', 'rgba(102, 119, 125, 0.75)');
-            document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
-            document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
+            document.documentElement.setAttribute("current-theme", "light");
+
         } else if (light.classList.contains("hide")) {
-            console.log('dark');
+
+            console.log("Enter dark");
+
             light.classList.remove("hide");
             dark.classList.add("hide");
 
-            document.documentElement.style.setProperty('--background', 'rgb(102, 119, 125)');
-            document.documentElement.style.setProperty('--background-trans', 'rgba(102, 119, 125, 0.75)');
-            document.documentElement.style.setProperty('--text', 'rgb(189, 209, 197)');
-            document.documentElement.style.setProperty('--text-trans', 'rgba(189, 209, 197, 0.75)');
-            document.documentElement.style.setProperty('--dark-text', ' rgb(55, 71, 76)');
-            document.documentElement.style.setProperty('--dark-text-trans', 'rgba(55, 71, 76, 0.75)');
+            document.documentElement.setAttribute("current-theme", "dark");
         }
 
     }, 500);
