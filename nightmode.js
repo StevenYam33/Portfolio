@@ -29,11 +29,9 @@ const getTheme = function() {
         if (window.matchMedia("(prefers-color-scheme:dark)").matches === true) {
             document.documentElement.setAttribute("current-theme", "dark");
             dark.classList.add("hide");
-            console.log("system dark")
         } else {
             document.documentElement.setAttribute("current-theme", "light");
             light.classList.add("hide");
-            console.log("system light")
         }
     };
 
@@ -65,21 +63,12 @@ themeButton.addEventListener("click", () =>{
         themeButton.animate(SpinningBig, 500);
 
         if (dark.classList.contains("hide")){
-
-            console.log("Enter light");
-
             dark.classList.remove("hide");
             light.classList.add("hide");
-
             document.documentElement.setAttribute("current-theme", "light");
-
         } else if (light.classList.contains("hide")) {
-
-            console.log("Enter dark");
-
             light.classList.remove("hide");
             dark.classList.add("hide");
-
             document.documentElement.setAttribute("current-theme", "dark");
         }
 
