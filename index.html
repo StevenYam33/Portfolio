@@ -25,6 +25,7 @@
     <script src="scroll_animations.js" defer></script>
     <script src="randomstring.js" defer></script>
     <script src="title.js" defer></script>
+    <script src="contact.js" defer></script>
   </head>
 
   <body class="aria-expanded">
@@ -172,15 +173,16 @@
           </div>
           <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as poossible</p>
           <div class="contact-main">
-            <form class="contact-form" action="https://formsubmit.co/df6fe6dfa9630359171c7e38cb71304b" method="POST">
+            <button class="contact-form-open button" data-value="Hello!">Hello!</button>
+            <form class="contact-form hide" action="https://formsubmit.co/df6fe6dfa9630359171c7e38cb71304b" method="POST">
               <!-- Honeypot -->
-              <!-- <input type="text" name="_honey" style="display: none" /> -->
+              <input type="text" name="_honey" style="display: none" />
 
               <!-- Disable Captcha -->
-              <!-- <input type="hidden" name="_captcha" value="false" /> -->
+              <input type="hidden" name="_captcha" value="false" />
 
               <!-- Thank you page -->
-              <!-- <input type="hidden" name="_next" value="https://stevenyam33.github.io/index.html" /> -->
+              <input type="hidden" name="_next" value="https://stevenyam33.github.io/index.html" />
 
               <div class="contact-form-content">
                 <label for="name" class="contact-form-label">Name</label>
