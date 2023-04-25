@@ -26,9 +26,13 @@
     <script src="randomstring.js" defer></script>
     <script src="title.js" defer></script>
     <script src="contact.js" defer></script>
+    <script src="cursor.js" defer></script>
   </head>
 
   <body class="aria-expanded">
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <!-- Header -->
     <header class="header-main hide" id="header">
       <div class="header-container">
         <svg class="header-logo"  width="50" height="50" fill="none" stroke="currentColor">
@@ -125,7 +129,7 @@
               </ul>
             </div>
             <div class="about-pic">
-              <img src="profile_transparent.png" alt="A photo of Steven Yam" />
+              <img id="profile-pic" src="profile_transparent.png" alt="A photo of Steven Yam" />
             </div>
           </div>
         </section>

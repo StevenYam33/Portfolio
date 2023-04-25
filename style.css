@@ -65,8 +65,35 @@ h3{
 }
 
 button{
-    cursor: pointer;
     border: none;
+}
+
+body, label, button, a, input, textarea{
+    cursor: none !important;
+}
+
+/* Cursor */
+.cursor{
+    display: none;
+    z-index: 9999;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--text);
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(0.75px);
+    pointer-events: none;
+}
+
+.cursor::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--dark-text-trans);
+    transform: translate(150%,150%);
 }
 
 /* Header */
@@ -76,7 +103,7 @@ button{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     position: fixed;
-    z-index: 100;
+    z-index: 99;
     transition: var(--transition);
 }
 
@@ -105,7 +132,7 @@ button{
 
 .header-ham-container{
     display: none;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .header-menu-button{
@@ -244,7 +271,7 @@ button{
 }
 
 .theme-button{
-    cursor: pointer;
+    /* cursor: pointer; */
     color: var(--text);
     height: 27.45px;
     background: transparent;
@@ -529,11 +556,6 @@ section{
 .contact-main{
     background-color: var(--dark-text-trans);
     box-sizing: content-box;
-    /* max-height: 1500px; */
-    /* max-width: 750px; */
-    /* width: 80%; */
-    /* padding: 1.75rem; */
-    /* text-align: center; */
     box-shadow: 0 1px 10px var(--dark-text);
     transform-origin: center center;
 }
@@ -541,8 +563,9 @@ section{
 .contact-form-open{
     background-color: var(--dark-text-trans);
     color: var(--background);
+    font-size: clamp(1.25rem, 1vw, 2.5rem);
     border: 3px solid var(--background);
-    padding: 1rem;
+    padding: 12px 16px;
     transition: var(--transition);
     box-shadow: 0 1px 10px var(--dark-text);
 }
