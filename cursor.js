@@ -14,7 +14,29 @@ window.addEventListener("mouseout", ()=>{
     cursor.style.display = "none";
 });
 
-// Set color 
+// moblie touch events
+window.addEventListener("touchstart", ()=>{
+    console.log("touchStart");
+    cursor.style.display = "block";
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+});
+
+window.addEventListener("touchmove", ()=>{
+    console.log("touchMove");
+
+    cursor.style.display = "block";
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+})
+
+window.addEventListener("touchend", ()=>{
+    console.log("touchEnd");
+
+    cursor.style.display = "none";
+});
+
+// Set color when hover to the elements
 [preloader, profilePic, expTab, formContianer, footer].forEach(function(e){
 
     e.addEventListener("mousemove", ()=>{
