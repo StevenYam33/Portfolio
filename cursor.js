@@ -3,18 +3,18 @@ const moblieMenu = document.querySelector("#header-navigation-menu");
 const profilePic = document.querySelector("#profile-pic");
 const expTab = document.querySelector(".experience-tab");
 
+// Set cursor movement
 window.addEventListener("mousemove", (e)=>{
-    // console.log(e);
     cursor.style.display = "block";
     cursor.style.left = e.pageX + "px";
     cursor.style.top = e.pageY + "px";
 });
-
+// not display when outside
 window.addEventListener("mouseout", ()=>{
     cursor.style.display = "none";
 });
 
-
+// Set color 
 [preloader, profilePic, expTab, formContianer, footer].forEach(function(e){
 
     e.addEventListener("mousemove", ()=>{
@@ -32,7 +32,6 @@ function moblieMenuColor(){
     const width = Math.max(document.clientWidth || 0, window.innerWidth || 0);
 
     if (width <= 850){
-        console.log("hi");
         moblieMenu.addEventListener("mousemove", ()=>{
             cursor.style.boxShadow = "0 0 0 1px var(--background)";
         });
