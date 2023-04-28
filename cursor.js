@@ -4,37 +4,45 @@ const profilePic = document.querySelector("#profile-pic");
 const expTab = document.querySelector(".experience-tab");
 
 // Set cursor movement
-window.addEventListener("mousemove", (e)=>{
+window.addEventListener("pointermove", e =>{
     cursor.style.display = "block";
     cursor.style.left = e.pageX + "px";
     cursor.style.top = e.pageY + "px";
 });
 // not display when outside
-window.addEventListener("mouseout", ()=>{
+window.addEventListener("pointerout", ()=>{
+    console.log("out");
     cursor.style.display = "none";
 });
 
 // moblie touch events
-window.addEventListener("touchstart", ()=>{
+window.addEventListener("pointerdown", e =>{
+    console.log(e);
     console.log("touchStart");
     cursor.style.display = "block";
     cursor.style.left = e.pageX + "px";
     cursor.style.top = e.pageY + "px";
 });
 
-window.addEventListener("touchmove", ()=>{
-    console.log("touchMove");
-
-    cursor.style.display = "block";
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
-})
-
-window.addEventListener("touchend", ()=>{
-    console.log("touchEnd");
-
+window.addEventListener("pointercancel", ()=>{
+    console.log("cancel");
     cursor.style.display = "none";
 });
+
+
+// window.addEventListener("touchmove", ()=>{
+//     console.log("touchMove");
+
+//     cursor.style.display = "block";
+//     cursor.style.left = e.pageX + "px";
+//     cursor.style.top = e.pageY + "px";
+// })
+
+// window.addEventListener("mousedown", ()=>{
+//     console.log("touchEnd");
+
+//     cursor.style.display = "none";
+// });
 
 // Set color when hover to the elements
 [preloader, profilePic, expTab, formContianer, footer].forEach(function(e){
