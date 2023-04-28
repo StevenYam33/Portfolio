@@ -47,11 +47,11 @@ window.addEventListener("pointercancel", ()=>{
 // Set color when hover to the elements
 [preloader, profilePic, expTab, formContianer, footer].forEach(function(e){
 
-    e.addEventListener("mousemove", ()=>{
+    e.addEventListener("pointermove", ()=>{
         cursor.style.boxShadow = "0 0 0 1px var(--background)";
     });
     
-    e.addEventListener("mouseout", ()=>{
+    e.addEventListener("pointerout", ()=>{
         cursor.style.boxShadow = "0 0 0 1px var(--text)";
     });
 
@@ -62,11 +62,11 @@ function moblieMenuColor(){
     const width = Math.max(document.clientWidth || 0, window.innerWidth || 0);
 
     if (width <= 850){
-        moblieMenu.addEventListener("mousemove", ()=>{
+        moblieMenu.addEventListener("pointermove", ()=>{
             cursor.style.boxShadow = "0 0 0 1px var(--background)";
         });
         
-        moblieMenu.addEventListener("mouseout", ()=>{
+        moblieMenu.addEventListener("pointerout", ()=>{
             cursor.style.boxShadow = "0 0 0 1px var(--text)";
         });
     };
