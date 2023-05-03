@@ -550,7 +550,6 @@ section{
 
 #contact{
     max-width: 750px;
-    width: 100%;
 }
 
 .contact-main{
@@ -791,6 +790,14 @@ footer a, footer h1, footer p, #copyright{
     }
 }
 
+@media only screen and (max-width: 350px) {
+    .contact-form{
+        width: 80vw;
+    }
+    .contact-form-input, .contact-submit-button{
+        font-size: 0.85rem;
+    }
+}
 
 @media only screen and (max-width: 280px){
     .about-skills-list{
