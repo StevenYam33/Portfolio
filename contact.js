@@ -1,4 +1,4 @@
-const formButton = document.querySelector(".contact-form-open");
+const openForm = document.querySelector(".contact-form-open");
 const formContianer = document.querySelector(".contact-main");
 const formMain = document.querySelector(".contact-form");
 const sumbmit = document.querySelector(".contact-submit-button");
@@ -31,7 +31,7 @@ const timing = {
     fill: "forwards"
 };
 
-formButton.addEventListener("click", ()=>{
+openForm.addEventListener("click", ()=>{
     
     formContianer.animate(xSmall, timing)
 
@@ -46,13 +46,18 @@ formButton.addEventListener("click", ()=>{
     setTimeout(() =>{
         formContianer.animate(xBig, timing)
         formMain.classList.remove("hide");
-        formButton.classList.add("hide");
+        openForm.classList.add("hide");
         formContianer.scrollIntoView({block: "center"});
     }, 1050)
     
 });
 
-sumbmit.addEventListener('submit', ()=>{
+
+formMain.addEventListener("submit", (e)=>{
+    e.preventDefault();
+    console.log("sumbitted");
+
     formMain.classList.add("hide");
-    formButton.classList.remove("hide");
-})
+    openForm.classList.remove("hide");
+
+});
