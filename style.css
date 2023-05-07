@@ -638,6 +638,34 @@ textarea{
     box-shadow: inset 0 0 0 3px var(--dark-text);
 }
 
+.contact-alert{
+    padding: 0 1rem 1.5rem;
+}
+
+.contact-alert p, .contact-alert h1{
+    color: var(--background);
+}
+
+.contact-name{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contact-alert-button{
+    background-color: var(--background);
+    color: var(--dark-text-trans);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+}
+
+.contact-alert-button:hover{
+    box-shadow: inset 0 0 0 3px var(--dark-text);
+}
+
 /* Footer */
 footer{
     background-color: var(--text);

@@ -2,7 +2,9 @@ const openForm = document.querySelector(".contact-form-open");
 const formContianer = document.querySelector(".contact-main");
 const formMain = document.querySelector(".contact-form");
 const sumbmit = document.querySelector(".contact-submit-button");
-
+const name = document.querySelector(".contact-name")
+const alert = document.querySelector(".contact-alert");
+const resubmit = document.querySelector(".contact-alert-button");
 
 // animations
 const xSmall = [
@@ -31,6 +33,7 @@ const timing = {
     fill: "forwards"
 };
 
+// tranformations
 openForm.addEventListener("click", ()=>{
     
     formContianer.animate(xSmall, timing)
@@ -45,19 +48,72 @@ openForm.addEventListener("click", ()=>{
 
     setTimeout(() =>{
         formContianer.animate(xBig, timing)
-        formMain.classList.remove("hide");
         openForm.classList.add("hide");
+        formMain.classList.remove("hide");
         formContianer.scrollIntoView({block: "center"});
     }, 1050)
     
 });
 
+formMain.addEventListener("submit", event =>{
+    event.preventDefault();
 
-formMain.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    console.log("sumbitted");
+    const formData = new FormData(formMain);
+    const data = new URLSearchParams(formData);
 
-    formMain.classList.add("hide");
-    openForm.classList.remove("hide");
+    fetch("https://formsubmit.co/df6fe6dfa9630359171c7e38cb71304b", {
+        method: "POST",
+        body: data
+    })
+    .then(res => {
+       return res.text();
+    }) 
+    // .then(txt => {
+    //    alert("Submit Success");
+    // })
+    .catch(error => {
+       console.log(error);
+    });
+    
+    name.textContent = formData.get("Name")
 
+    formMain.reset();
+
+    formContianer.animate(xSmall, timing)
+
+    setTimeout(() =>{
+        formContianer.animate(ySmall, timing)
+    }, 350)
+    
+    setTimeout(() =>{
+        formContianer.animate(yBig, timing)
+        alert.classList.remove("hide");
+        formMain.classList.add("hide");
+        formContianer.scrollIntoView({block: "center"});
+    }, 700)
+
+    setTimeout(() =>{
+        formContianer.animate(xBig, timing)
+    }, 1050)
+
+    return false; 
+});
+
+resubmit.addEventListener("click", ()=>{
+    formContianer.animate(xSmall, timing)
+
+    setTimeout(() =>{
+        formContianer.animate(ySmall, timing)
+    }, 350)
+    
+    setTimeout(() =>{
+        formContianer.animate(yBig, timing)
+    }, 700)
+
+    setTimeout(() =>{
+        formContianer.animate(xBig, timing)
+        alert.classList.add("hide");
+        formMain.classList.remove("hide");
+        formContianer.scrollIntoView({block: "center"});
+    }, 1050)
 });
