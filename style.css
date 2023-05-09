@@ -385,14 +385,11 @@ section{
 }
 
 .welcome-heading-title{
-    /* width: 0; */
     border-right: 3px solid;
     white-space: nowrap;
     overflow: hidden;
     letter-spacing: 1.5px;
-    animation: blinking 1000ms infinite
-    /* ,type 6000ms steps(var(--word-count)) infinite */
-    ;
+    animation: blinking 1000ms infinite;
 }
 
 @keyframes blinking {
@@ -405,16 +402,16 @@ section{
     width: 0;
     animation: type 2000ms steps(var(--word-count)) forwards;
   }
+  
+    @keyframes type {
+      100%{
+          width: 100%;
+      }
+    }
 
   .untype{
     width: 100%;
     animation: untype 2000ms steps(var(--word-count)) forwards;
-  }
-
-  @keyframes type {
-    100%{
-        width: 100%;
-    }
   }
 
   @keyframes untype {
