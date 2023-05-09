@@ -55,6 +55,7 @@ openForm.addEventListener("click", ()=>{
     
 });
 
+// form submit and tranform to success page
 formMain.addEventListener("submit", event =>{
     event.preventDefault();
 
@@ -68,9 +69,6 @@ formMain.addEventListener("submit", event =>{
     .then(res => {
        return res.text();
     }) 
-    // .then(txt => {
-    //    alert("Submit Success");
-    // })
     .catch(error => {
        console.log(error);
     });
@@ -99,6 +97,7 @@ formMain.addEventListener("submit", event =>{
     return false; 
 });
 
+// resubmit
 resubmit.addEventListener("click", ()=>{
     formContianer.animate(xSmall, timing)
 
