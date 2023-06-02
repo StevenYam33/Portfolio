@@ -815,6 +815,11 @@ footer a, footer h1, footer p, #copyright{
         grid-template-columns: none;
     }
 
+    .welcome-heading{
+        font-size: clamp(1.25rem, 1vw, 2.5rem);
+        margin: 16px 0;
+    }
+
     .about-container{
         display: block;
     }
