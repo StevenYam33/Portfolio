@@ -62,7 +62,7 @@ formMain.addEventListener("submit", event =>{
     const formData = new FormData(formMain);
     const data = new URLSearchParams(formData);
 
-    fetch("https://formsubmit.co/df6fe6dfa9630359171c7e38cb71304b", {
+    fetch("https://formspree.io/f/mnqyklwg", {
         method: "POST",
         body: data
     })

@@ -21,6 +21,13 @@ window.addEventListener("pointerdown", e =>{
     cursor.style.top = e.pageY + "px";
 });
 
+// moblie scroll events
+window.addEventListener('scroll', ()=>{
+    cursor.style.display = "block";
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+});
+
 window.addEventListener("pointercancel", ()=>{
     cursor.style.display = "none";
 });
