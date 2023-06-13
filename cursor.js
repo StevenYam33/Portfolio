@@ -4,7 +4,7 @@ const profilePic = document.querySelector("#profile-pic");
 const expTab = document.querySelector(".experience-tab");
 
 var isTouching = false;
-var triggeringElements = [".preloader", "#profilePic", ".experience-tab", ".contact-main", ".footer-main", "#header-navigation-menu"]
+var triggeringElements = [".preloader", "#profile-pic", ".experience-tab", ".contact-main", ".footer-container", "#header-navigation-menu"]
 
 
 // Set cursor movement
@@ -59,15 +59,6 @@ function moblieMenuColor(){
 
     if (width <= 850){
 
-
-        // ["pointermove"].forEach(e => 
-        //     moblieMenu.addEventListener(e, cursorColorReverse)
-        // );
-        
-        // ["pointerout"].forEach(e =>
-        //     moblieMenu.addEventListener(e, cursorColorReset)
-        // );
-
         window.addEventListener('touchmove', function(event) {
             var touch = event.touches[0];
             var targetElement = document.elementFromPoint(touch.clientX, touch.clientY);
@@ -88,14 +79,6 @@ function moblieMenuColor(){
               }
             }
           });
-
-            // ["pointermove", "pointerdown"].forEach(pointer => 
-            //     elements.addEventListener(pointer, cursorColorReverse)
-            // );
-            
-            // elements.addEventListener("pointerout", ()=>{
-            //     cursorColorReset();
-            // });
         
     };
 
