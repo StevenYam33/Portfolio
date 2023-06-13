@@ -76,7 +76,7 @@ body, label, button, a, input, textarea{
 .cursor{
     display: none;
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -89,6 +89,7 @@ body, label, button, a, input, textarea{
 .cursor::before{
     content: "";
     position: absolute;
+    position: fixed;
     width: 10px;
     height: 10px;
     border-radius: 50%;
