@@ -73,28 +73,27 @@ body, label, button, a, input, textarea{
 }
 
 /* Cursor */
-.cursor{
+.cursor, .cursorOuter{
     display: none;
-    z-index: 9999;
     position: fixed;
-    width: 40px;
-    height: 40px;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px var(--text);
-    transform: translate(-50%, -50%);
-    backdrop-filter: blur(0.75px);
+    transform: translate(-50%,-50%);
     pointer-events: none;
 }
 
-.cursor::before{
-    content: "";
-    position: absolute;
-    position: fixed;
+.cursor{
+    z-index: 9999;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
     background: var(--dark-text-trans);
-    transform: translate(150%,150%);
+}
+
+.cursorOuter{
+    z-index: 9998;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 0 1px var(--text);
+    backdrop-filter: blur(0.5px);
 }
 
 /* Header */
