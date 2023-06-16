@@ -14,11 +14,13 @@ const body = document.querySelector("body");
             body.setAttribute("aria-expanded", true);
             headerButton.setAttribute("aria-expanded", true);
             main.setAttribute("aria-expanded", true);
+            footer.setAttribute("aria-expanded", true);
         } else if (visibility === "true") {
             headerList.setAttribute("data-visible", false);
             body.setAttribute("aria-expanded", false);
             headerButton.setAttribute("aria-expanded", false);
             main.setAttribute("aria-expanded", false);
+            footer.setAttribute("aria-expanded", false);
         }
     })
 });
@@ -31,5 +33,6 @@ main.addEventListener('click', () =>{
         body.setAttribute("aria-expanded", false);
         headerButton.setAttribute("aria-expanded", false);
         main.setAttribute("aria-expanded", false);
+        footer.setAttribute("aria-expanded", false);
     }
     })

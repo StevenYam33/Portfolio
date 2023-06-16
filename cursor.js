@@ -6,35 +6,39 @@ const expTab = document.querySelector(".experience-tab");
 
 // Set cursor movement
 window.addEventListener("mousemove", e =>{
-    cursor.style.display = "block";
-    cursorOuter.style.display = "block";
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-
-    cursorOuter.animate({
-        left: e.clientX + "px",
-        top: e.clientY + "px"
-    }, {duration: 800, fill: "forwards"});
-
-});
-
-// not display when outside
-window.addEventListener("mouseout", e=>{
     if (e.relatedTarget === null) {
-        cursor.style.display = "none";
-        cursorOuter.style.display = "none";
+        cursor.style.display = "block";
+        cursorOuter.style.display = "block";
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+
+        cursorOuter.animate({
+            left: e.clientX + "px",
+            top: e.clientY + "px"
+        }, {duration: 800, fill: "forwards"});
     }
 });
 
-// Set color when hover to the elements
-[preloader, profilePic, expTab, formContianer, footer].forEach(function(elements){
+// not display when outside
+window.addEventListener("mouseout", e =>{
+    if (e.relatedTarget === null) {
+         cursorDisable()
+    }
+});
 
-    ["mousemove", "mousedown"].forEach(pointer => 
-        elements.addEventListener(pointer, cursorColorChange)
+["touchstart", "touchend", "touchmove", "touchcancel"].forEach(touchEvent => 
+    window.addEventListener(touchEvent, cursorDisable)
+);
+
+// Set color when hover to the elements
+[preloader, profilePic, expTab, formContianer].forEach(function(elements){
+
+    ["mousemove", "mousedown"].forEach(mouseEvent => 
+        elements.addEventListener(mouseEvent, cursorOuterColorChange)
     );
     
     elements.addEventListener("mouseout", ()=>{
-        cursorColorReset();
+        cursorOuterColorReset();
     });
 
 });
@@ -45,20 +49,32 @@ function moblieMenuColor(){
 
     if (width <= 850){
         moblieMenu.addEventListener("mousemove", ()=>{
-            cursorColorChange();
+            cursorOuterColorChange();
         })
 
         moblieMenu.addEventListener("mouseout", ()=>{
-            cursorColorReset();
+            cursorOuterColorReset();
+        })
+    };
+
+    // reset the color when the width back to nomral
+    if (width > 850){
+        moblieMenu.addEventListener("mousemove", ()=>{
+            cursorOuterColorReset();
         })
     };
 };
 
-function cursorColorChange() {
+function cursorDisable(){
+    cursor.style.display = "none";
+    cursorOuter.style.display = "none";
+}
+
+function cursorOuterColorChange() {
     cursorOuter.style.boxShadow = "0 0 0 1px var(--background)";
 }
 
-function cursorColorReset() {
+function cursorOuterColorReset() {
     cursorOuter.style.boxShadow = "0 0 0 1px var(--text)";
 }
 

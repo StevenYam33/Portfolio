@@ -1,6 +1,6 @@
 const header = document.querySelector("#header");
 const home = document.querySelector("#home");
-const footer = document.querySelector("#footer");
+const footer = document.querySelector("footer");
 const preloader = document.querySelector("#preloader");
 
 window.onload = function(){

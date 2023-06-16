@@ -85,7 +85,8 @@ body, label, button, a, input, textarea{
     z-index: 9999;
     width: 10px;
     height: 10px;
-    background: var(--dark-text-trans);
+    box-shadow: 0 0 0 0.25px var(--text);
+    background: var(--dark-text);
 }
 
 .cursorOuter{
@@ -681,16 +682,6 @@ textarea{
 }
 
 /* Footer */
-footer{
-    background-color: var(--text);
-    color: var(--background);
-}
-
-footer a, footer h1, footer p, #copyright{
-    color: var(--background);
-    font-weight: 100;
-}
-
 .footer-container{
     width: 95vw;
     margin: auto;
@@ -698,43 +689,64 @@ footer a, footer h1, footer p, #copyright{
 
 .upper-footer{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 0 10px;
-}
-
-.lower-footer{
-    border-top: 1px solid var(--background);
-    padding: 1rem;
-    text-align: center;
-    margin: auto;
-}
-
-.subfooter{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
 .social{
-    overflow: visible !important;
+    position: relative;
+}
+
+.social::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 2.5px;
+    background: var(--text);
+    inset: auto 0 0 0;
+    margin: auto;
 }
 
 .social a{
     margin-right: 8px;
 }
 
-.social-logo-svg{
-    stroke: var(--background);
+.social a g{
+    transform-origin: center;
+    transform: scale(0.75);
+}
+
+.social a g path, .social a g rect, .social a g circle{
+    stroke: var(--text);
     fill: var(--background);
-    stroke-width: 80;
-    stroke-opacity: 0;
+    stroke-width: 1.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
     transition: var(--transition);
 }
 
-.social-logo-svg:hover{
-    transform: translateY(-25px);
-    fill: var(--dark-text);
+.social a svg:hover g path, .social a svg:hover g rect, .social a svg:hover g circle{
+    transform: translateY(-5px);
+    stroke: var(--dark-text);
+}
+
+.lower-footer{
+    padding: 1rem;
+    text-align: center;
+    margin: auto;
+}
+
+.email{
+    font-size: 0.75rem;
+}
+
+.lower-footer a:hover {
+    color: var(--dark-text);
+}
+
+footer a{
+    color: var(--text);
+    font-weight: 100;
 }
 
 /* mobile view */
@@ -778,6 +790,11 @@ footer a, footer h1, footer p, #copyright{
     }
     
     #home[aria-expanded="true"]{
+        filter: blur(5px);
+        transition: var(--transition);
+    }
+
+    footer[aria-expanded="true"]{
         filter: blur(5px);
         transition: var(--transition);
     }
@@ -830,10 +847,6 @@ footer a, footer h1, footer p, #copyright{
 
     .about-pic img{
         margin-top: 1.5rem;
-    }    
-
-    .upper-footer {
-        display: block;
     }
 }
 
