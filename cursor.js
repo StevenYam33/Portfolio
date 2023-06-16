@@ -27,7 +27,10 @@ window.addEventListener("mouseout", e =>{
 });
 
 ["touchstart", "touchend", "touchmove", "touchcancel"].forEach(touchEvent => 
-    window.addEventListener(touchEvent, cursorDisable)
+    window.addEventListener(touchEvent, e => {
+        e.preventDefault();
+
+    })
 );
 
 // Set color when hover to the elements
