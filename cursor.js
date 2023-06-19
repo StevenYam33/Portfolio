@@ -4,22 +4,21 @@ const moblieMenu = document.querySelector("#header-navigation-menu");
 const profilePic = document.querySelector("#profile-pic");
 const expTab = document.querySelector(".experience-tab");
 
-let touchActive = false;
-
 // Set cursor movement
 window.addEventListener("mousemove", e =>{
-    cursor.style.display = "block";
-    cursorOuter.style.display = "block";
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-
-    cursorOuter.animate({
-        left: e.clientX + "px",
-        top: e.clientY + "px"
-    }, 
-    {duration: 800, fill: "forwards"}
-    );
-    // e.preventDefault();
+    if (!isTouchDevice()) {
+        cursor.style.display = "block";
+        cursorOuter.style.display = "block";
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+    
+        cursorOuter.animate({
+            left: e.clientX + "px",
+            top: e.clientY + "px"
+        }, 
+        {duration: 800, fill: "forwards"}
+        );
+    }
 });
 
 // not display when outside
@@ -30,7 +29,9 @@ window.addEventListener("mouseout", ()=>{
 // Hide cursor for touch events
 ["touchstart", "touchend", "touchmove", "touchcancel"].forEach(touchEvent =>{
     window.addEventListener(touchEvent, ()=> {
-        cursorDisable();
+        if (isTouchDevice()){
+            cursorDisable();
+        }
     })
 });
 
@@ -46,6 +47,11 @@ window.addEventListener("mouseout", ()=>{
     });
 
 });
+
+// Check if device is touch device or not
+function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+}
 
 //set color change for sidebar menu
 function moblieMenuColor(){
