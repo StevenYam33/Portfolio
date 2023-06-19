@@ -4,37 +4,38 @@ const moblieMenu = document.querySelector("#header-navigation-menu");
 const profilePic = document.querySelector("#profile-pic");
 const expTab = document.querySelector(".experience-tab");
 
+let touchActive = false;
+
 // Set cursor movement
 window.addEventListener("mousemove", e =>{
-    if (e.relatedTarget === null) {
-        cursor.style.display = "block";
-        cursorOuter.style.display = "block";
-        cursor.style.left = e.clientX + "px";
-        cursor.style.top = e.clientY + "px";
+    cursor.style.display = "block";
+    cursorOuter.style.display = "block";
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
 
-        cursorOuter.animate({
-            left: e.clientX + "px",
-            top: e.clientY + "px"
-        }, {duration: 800, fill: "forwards"});
-    }
+    cursorOuter.animate({
+        left: e.clientX + "px",
+        top: e.clientY + "px"
+    }, 
+    {duration: 800, fill: "forwards"}
+    );
+    // e.preventDefault();
 });
 
 // not display when outside
-window.addEventListener("mouseout", e =>{
-    if (e.relatedTarget === null) {
-         cursorDisable()
-    }
+window.addEventListener("mouseout", ()=>{
+    cursorDisable();
 });
 
-["touchstart", "touchend", "touchmove", "touchcancel"].forEach(touchEvent => 
-    window.addEventListener(touchEvent, e => {
-        e.preventDefault();
-
+// Hide cursor for touch events
+["touchstart", "touchend", "touchmove", "touchcancel"].forEach(touchEvent =>{
+    window.addEventListener(touchEvent, ()=> {
+        cursorDisable();
     })
-);
+});
 
 // Set color when hover to the elements
-[preloader, profilePic, expTab, formContianer].forEach(function(elements){
+[preloader, profilePic, expTab, formContianer].forEach(elements =>{
 
     ["mousemove", "mousedown"].forEach(mouseEvent => 
         elements.addEventListener(mouseEvent, cursorOuterColorChange)
