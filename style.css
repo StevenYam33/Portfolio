@@ -232,12 +232,12 @@ body, label, button, a, input, textarea{
     text-transform: uppercase;
 }
 
-.header-link:hover{
-    color: var(--dark-text);
+.header-link:hover, .activeTab{
+    color: var(--dark-text) !important;
     transition: var(--transition);
 }
 
-.header-link:hover::after{
+.header-link:hover::after, .activeTab::after{
     position: absolute;
     content: "";
     inset: auto 0 0 0;
@@ -501,7 +501,7 @@ section{
 
 .about-pic img{
     width: clamp(250px, 50vw, 350px);
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: var(--dark-text-trans);
     box-shadow: 0 0 10px var(--dark-text);
     display: flex;
@@ -807,12 +807,12 @@ footer a{
         padding: 0px;
     }
     
+    .header-link-item{
+        margin: 0px auto 15px;
+    }
+    
     .header-links a{
         color: var(--background);
-    }
-
-    .header-links li{
-        margin: 0px auto 15px;
     }
 
     #resume:hover{

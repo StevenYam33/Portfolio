@@ -1,7 +1,7 @@
 const cursor = document.querySelector(".cursor");
 const cursorOuter = document.querySelector(".cursorOuter");
 const moblieMenu = document.querySelector("#header-navigation-menu");
-const profilePic = document.querySelector("#profile-pic");
+const profilePic = document.querySelector(".about-pic img");
 const expTab = document.querySelector(".experience-tab");
 
 // Set cursor movement
@@ -22,8 +22,10 @@ window.addEventListener("mousemove", e =>{
 });
 
 // not display when outside
-window.addEventListener("mouseout", ()=>{
-    cursorDisable();
+window.addEventListener("mouseout", e =>{
+    if (e.relatedTarget === null) {
+        cursorDisable();
+    }
 });
 
 // Hide cursor for touch events
@@ -36,16 +38,14 @@ window.addEventListener("mouseout", ()=>{
 });
 
 // Set color when hover to the elements
-[preloader, profilePic, expTab, formContianer].forEach(elements =>{
-
+[preloader, profilePic, expTab, formContianer].forEach(elements => {
     ["mousemove", "mousedown"].forEach(mouseEvent => 
         elements.addEventListener(mouseEvent, cursorOuterColorChange)
     );
     
-    elements.addEventListener("mouseout", ()=>{
+    elements.addEventListener("mouseout", () => {
         cursorOuterColorReset();
     });
-
 });
 
 // Check if device is touch device or not
