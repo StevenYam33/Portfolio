@@ -8,17 +8,17 @@ const observer = new IntersectionObserver((entries, observer) => {
         entry.target.classList.add("scrolled");
 
         if (entry.isIntersecting){
-            console.log(entry.target);
             const index = Array.from(pages).indexOf(entry.target)
             headerItem.forEach(headerItem => {
                 headerItem.classList.remove("activeTab")
             })
-            headerItem[index-1].classList.add("activeTab")
+            if (headerItem[index-1]) {
+                headerItem[index-1].classList.add("activeTab");
+            }
         }
     });
-
 },{
-    threshold: 0.2
+    threshold: 0.75
 });
 
 document.querySelectorAll('.home-container')
