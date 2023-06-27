@@ -1,24 +1,14 @@
+![demo](https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/demo.png)
+
 # Your Favicon Package
 
 This package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
 
-## Install instructions
+## 🎨 Color Reference
 
-To install this package:
-
-Extract this package in the root of your web site. If your site is <code>http://www.example.com</code>, you should be able to access a file named <code>http://www.example.com/favicon.ico</code>.
-
-Insert the following code in the `head` section of your pages:
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4e5859">
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="theme-color" content="#4e5859">
-
-*Optional* - Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)
+| Color                    | Hex                                                                |
+| ------------------------ | ------------------------------------------------------------------ |
+| Conch (background/text)  | ![#Bdd1c5](https://via.placeholder.com/10/Bdd1c5?text=+) `#Bdd1c5` |
+| Nevada (text/background) | ![#66777d](https://via.placeholder.com/10/66777d?text=+) `#66777d` |
+| Gull Gray (Accent)       | ![#9ab3b5](https://via.placeholder.com/10/9ab3b5?text=+) `#9ab3b5` |
+| Limed Spruce (Dark text) | ![#37474c](https://via.placeholder.com/10/37474c?text=+) `#37474c` |
