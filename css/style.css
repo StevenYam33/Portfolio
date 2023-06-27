@@ -302,6 +302,7 @@ body, label, button, a, input, textarea{
 
 .hide{
     display: none;
+    opacity: 0;
 }
 
 .preload-logo{
