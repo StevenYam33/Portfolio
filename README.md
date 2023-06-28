@@ -10,7 +10,7 @@
 
 ![demo](https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/demo.png)
 
-# Color Reference 🎨
+# Color Reference
 
 | Color                    | Hex                                                                |
 | ------------------------ | ------------------------------------------------------------------ |
