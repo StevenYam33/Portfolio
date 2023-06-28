@@ -10,11 +10,7 @@
 
 ![demo](https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/demo.png)
 
-# Favicon Package
-
-Favicon package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
-
-## Color Reference 🎨
+# Color Reference 🎨
 
 | Color                    | Hex                                                                |
 | ------------------------ | ------------------------------------------------------------------ |
@@ -22,3 +18,7 @@ Favicon package was generated with [RealFaviconGenerator](https://realfavicongen
 | Nevada (text/background) | ![#66777d](https://via.placeholder.com/10/66777d?text=+) `#66777d` |
 | Gull Gray (Accent)       | ![#9ab3b5](https://via.placeholder.com/10/9ab3b5?text=+) `#9ab3b5` |
 | Limed Spruce (Dark text) | ![#37474c](https://via.placeholder.com/10/37474c?text=+) `#37474c` |
+
+# Favicon Package
+
+Favicon package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
