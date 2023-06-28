@@ -1,10 +1,20 @@
+<div align="center">
+    <img alt="Logo" src="https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/logo.png" width="100" />
+</div>
+<h1 align="center">
+    <a href="https://stevenyam.dev" target="_blank">stevenyam.dev</a>   
+</h1>
+<p align="center">
+    Hello! Thank you for visiting the repository of my portfolio website. This website isn't just my portfolio but also a personal project for me to learn and improve.
+</p>
+
 ![demo](https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/demo.png)
 
-# Your Favicon Package
+# Favicon Package
 
-This package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
+Favicon package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
 
-## 🎨 Color Reference
+## Color Reference 🎨
 
 | Color                    | Hex                                                                |
 | ------------------------ | ------------------------------------------------------------------ |
