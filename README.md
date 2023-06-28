@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="Logo" src="https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/logo.png" width="100" />
+    <img alt="Logo" src="https://raw.githubusercontent.com/StevenYam33/stevenyam33.github.io/master/image/logo.png" width="75" />
 </div>
 <h1 align="center">
     <a href="https://stevenyam.dev" target="_blank">stevenyam.dev</a>   
