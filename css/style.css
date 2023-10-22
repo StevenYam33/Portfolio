@@ -289,7 +289,7 @@ body, label, button, a, input, textarea{
 .preloader{
     width: 100vw;
     height: 100vh;
-    height: 100svh;
+    height: 100dvh;
     background-color: var(--text);
     overflow: hidden;
     animation: 600ms hide linear;
@@ -813,7 +813,7 @@ footer a{
         right: 0px;
         width: min(65vw, 400px);
         height: 100vh;
-        height: 100svh;
+        height: 100dvh;
         background: var(--text);
         transform: translateX(100%);
         transition: var(--transition);
