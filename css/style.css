@@ -226,7 +226,6 @@ body, label, button, a, input, textarea{
     position: relative;
     margin: 0 20px;
     letter-spacing: 1px;
-    font-weight: 700;
     color: var(--text);
     text-transform: uppercase;
 }
@@ -636,7 +635,6 @@ animation: untype 2000ms steps(var(--word-count)) forwards;
 
 .contact-form-label{
     text-align: left;
-    font-weight: bolder;
     color: var(--accent);
 }
 
@@ -678,7 +676,6 @@ textarea{
     color: var(--dark-text);
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-weight: bold;
     padding: 1rem 0rem;
     border-radius: 5px;
 }
@@ -697,7 +694,6 @@ textarea{
 
 .contact-name{
     text-transform: uppercase;
-    font-weight: bold;
     font-style: italic;
 }
 
@@ -706,7 +702,6 @@ textarea{
     color: var(--dark-text-trans);
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-weight: bold;
     padding: 1rem 0.5rem;
     border-radius: 5px;
 }
@@ -781,7 +776,6 @@ textarea{
 
 footer a{
     color: var(--text);
-    font-weight: 100;
 }
 
 /* mobile view */
