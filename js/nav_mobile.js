@@ -13,6 +13,7 @@ const html = document.documentElement;
         if (visibility === "false") {
             headerList.setAttribute("data-visible", true);
             html.setAttribute("nav-expanded", true);
+            html.style.overflow = "hidden";
             body.setAttribute("nav-expanded", true);
             headerButton.setAttribute("nav-expanded", true);
             main.setAttribute("nav-expanded", true);
@@ -20,6 +21,7 @@ const html = document.documentElement;
         } else if (visibility === "true") {
             headerList.setAttribute("data-visible", false);
             html.setAttribute("nav-expanded", false);
+            html.style.overflow = "auto";
             body.setAttribute("nav-expanded", false);
             headerButton.setAttribute("nav-expanded", false);
             main.setAttribute("nav-expanded", false);
