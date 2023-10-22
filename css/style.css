@@ -784,8 +784,9 @@ footer a{
 /* mobile view */
 @media only screen and (max-width: 850px){
     
+    html body[aria-expanded="true"],
     body[aria-expanded="true"]{
-        overflow: hidden;
+        overflow: hidden !important;
     }   
 
     .logo{
