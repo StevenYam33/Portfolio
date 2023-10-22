@@ -101,6 +101,11 @@ body, label, button, a, input, textarea{
 }
 
 /* Header */
+html[nav-expanded="true"],
+body[nav-expanded="true"]{
+    overflow: hidden !important;
+}  
+
 .header-main{
     width: 100%;
     background-color: var(--background-trans);
@@ -783,12 +788,6 @@ footer a{
 
 /* mobile view */
 @media only screen and (max-width: 850px){
-    
-    html[nav-expanded="true"],
-    body[nav-expanded="true"]{
-        overflow: hidden !important;
-    }   
-
     .logo{
         width: 25vw;
     }
@@ -817,7 +816,7 @@ footer a{
         transition: var(--transition);
     }
     
-    .header-list[data-visible="true"]{
+    .header-list[nav-expanded="true"]{
         box-shadow: 0 1px 100px var(--dark-text);
         transform: translateX(0%);
     }

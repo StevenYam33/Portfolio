@@ -8,22 +8,18 @@ const html = document.documentElement;
 
 [headerButton, headerLink].forEach(function(e){
     e.addEventListener('click', () => {
-        const visibility = headerList.getAttribute('data-visible');
+        const navExpanded = headerList.getAttribute('nav-expanded');
     
-        if (visibility === "false") {
-            headerList.setAttribute("data-visible", true);
+        if (navExpanded === "false") {
+            headerList.setAttribute("nav-expanded", true);
             html.setAttribute("nav-expanded", true);
-            html.style.overflow = "hidden";
-            body.style.overflow = "hidden";
             body.setAttribute("nav-expanded", true);
             headerButton.setAttribute("nav-expanded", true);
             main.setAttribute("nav-expanded", true);
             footer.setAttribute("nav-expanded", true);
-        } else if (visibility === "true") {
-            headerList.setAttribute("data-visible", false);
+        } else if (navExpanded === "true") {
+            headerList.setAttribute("nav-expanded", false);
             html.setAttribute("nav-expanded", false);
-            html.style.overflow = "auto";
-            body.style.overflow = "auto";
             body.setAttribute("nav-expanded", false);
             headerButton.setAttribute("nav-expanded", false);
             main.setAttribute("nav-expanded", false);
@@ -33,10 +29,10 @@ const html = document.documentElement;
 });
 
 main.addEventListener('click', () =>{
-    const visibility = headerList.getAttribute('data-visible');
+    const navExpanded = headerList.getAttribute('nav-expanded');
 
-    if (visibility === "true") {
-        headerList.setAttribute("data-visible", false);
+    if (navExpanded === "true") {
+        headerList.setAttribute("nav-expanded", false);
         html.setAttribute("nav-expanded", false);
         body.setAttribute("nav-expanded", false);
         headerButton.setAttribute("nav-expanded", false);

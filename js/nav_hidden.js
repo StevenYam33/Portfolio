@@ -2,9 +2,9 @@ const headerNav = document.querySelector(".header-main");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-    const visibility = headerList.getAttribute('data-visible');
+    const navExpanded = headerList.getAttribute('nav-expanded');
 
-    if (lastScrollY < window.scrollY && visibility === "false"){
+    if (lastScrollY < window.scrollY && navExpanded === "false"){
         headerNav.classList.add("header-hidden"); 
     } else {
         headerNav.classList.remove("header-hidden");
