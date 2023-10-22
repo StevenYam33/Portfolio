@@ -289,7 +289,7 @@ body, label, button, a, input, textarea{
 .preloader{
     width: 100vw;
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
     background-color: var(--text);
     overflow: hidden;
     animation: 600ms hide linear;
