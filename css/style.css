@@ -9,6 +9,7 @@
     --dark-text: rgb(55, 71, 76);
     --dark-text-trans: rgba(55, 71, 76, 0.75);
     --accent: rgb(154, 179, 181);
+    --accent-trans: rgba(154, 179, 181, 0.5);
     --font-text: 'Fragment Mono', monospace;
     --nav-height: 66px;
     --home-width: 85%;
@@ -467,7 +468,8 @@ animation: untype 2000ms steps(var(--word-count)) forwards;
 
 .scroll-container{
     position: absolute;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0%;
     display: flex;
     flex-direction: column;
@@ -484,11 +486,11 @@ animation: untype 2000ms steps(var(--word-count)) forwards;
 
 @keyframes bounce {
     50%{
-        transform: translateY(10px);
+        transform: translateX(-50%) translateY(10px);
     }
 }
 
-#about, #experience, #contact{
+#about, #experience, #work, #contact{
     display: flex;
     flex-direction: column;
     padding: 10vh 0;
@@ -604,6 +606,72 @@ animation: untype 2000ms steps(var(--word-count)) forwards;
     content: "⫸";
     color: var(--dark-text);
     left: 0px;
+}
+
+.work-list{
+    display: grid;
+    max-width: 1200px;
+    width: 100%;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.work-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-item a{
+    position: relative;
+}
+
+.work-item:hover img{
+    transform: scale(100%);
+}
+
+.work-item img{
+    display: block;
+    max-width: 100%;
+    border-radius: 0.6rem;
+    transform: scale(90%);
+    transition: var(--transition);
+}
+
+.work-description{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7.5%;
+    border-radius: 0.5rem;
+    position: absolute;
+    backdrop-filter: blur(2.5px);
+    
+    color: var(--accent);
+    background-color: var(--dark-text-trans);
+}
+
+.work-description p{
+    color: var(--accent);
+}
+
+.work-title{
+    align-self: flex-start;
+}
+
+.work-skills{
+    display: inline-flex;
+    gap: 1rem;
+    align-self: flex-end;
 }
 
 #contact{

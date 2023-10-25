@@ -57,6 +57,9 @@
               <a href="#experience" class="header-link" data-value="Experience">Experience</a>
             </li>
             <li class="header-link-item">
+              <a href="#work" class="header-link" data-value="Work">Work</a>
+            </li>
+            <li class="header-link-item">
                 <a href="#contact" class="header-link" data-value="Contact">Contact</a>
             </li>
             <li>
@@ -105,14 +108,14 @@
                 <li class="color-block"></li>
               </ul>
             </div>
-          </section>
-          <div class="scroll-container">
-            <span>scroll down</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-            </svg>
+            <div class="scroll-container">
+              <span>scroll down</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </div>
           </div>
-        </div>
+        </section>
           
         <!-- About -->
         <section class="home-container" id="about">
@@ -180,6 +183,33 @@
           </div>
         </section>
 
+        <!-- Work -->
+        <section class="home-container" id="work">
+          <div class="work-heading">
+            <h1 class="heading">Work</h1>
+          </div>
+            <div class="work-main">
+              <p>Here are some of my works:</p>
+                <ul class="work-list">
+                  <li class="work-item">
+                    <a href="https://drkhiu.com/"  target="_blank">
+                      <img src="image/Projects/drkhiu.png" alt="A photo of Dr.khiu website" />
+                      <div class="work-description">
+                        <h1 class="work-title">Portfolio Website</h1>
+                        <p class="work-intro">This is a portfolio website I build for Dr.Khiu. Built with React and enhanced with dynamic animations from Framer Motion animation library.</p>
+                        <ul class="work-skills">
+                          <li>React</li>
+                          <li>JavaScript</li>
+                          <li>HTMl</li>
+                          <li>CSS</li>
+                        </ul>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+          </div>
+        </section>
+
         <!-- Contact -->
         <section class="home-container" id="contact">
           <div class="contact-heading">
@@ -213,38 +243,33 @@
     </main>
     <footer class="footer-main hide" nav-expanded="false">
       <div class="footer-container">
-        <!-- <div class="upper-footer"> -->
-          <div class="upper-footer">
-            <!-- <h1>SOCIAL</h1> -->
-            <div class="social">
-              <!-- Facebook -->
-              <a href="https://www.facebook.com/stevenyam33/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" y="30">
-                  <g>
-                    <!-- <path d="M13 9h4.5l-.5 2h-4v9h-2v-9H7V9h4V7.128c0-1.783.186-2.43.534-3.082a3.635 3.635 0 0 1 1.512-1.512C13.698 2.186 14.345 2 16.128 2c.522 0 .98.05 1.372.15V4h-1.372c-1.324 0-1.727.078-2.138.298-.304.162-.53.388-.692.692-.22.411-.298.814-.298 2.138V9z"/> -->
-                    <path d="M9.89231 21V13.2538H7V9.94249H9.89231C9.89231 6.42419 9.89231 2.07805 17 3.17198V6.03983C13.9231 5.71462 13.6154 6.66071 13.6154 9.94249H17L16.3231 13.2538H13.6154V21"/>
-                </svg>
-              </a>
-              <!-- Linkedin -->
-              <a href="https://www.linkedin.com/in/steven-yam/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" y="30">
-                  <g>
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect x="2" y="9" width="4" height="12"/>
-                    <circle cx="4" cy="4" r="2"/>
-                </svg>
-              </a>
-              <!-- Gibhub -->
-              <a href="https://github.com/StevenYam33/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" y="30">
-                  <g>
-                    <!-- <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path> -->
-                    <path d="M11.7444 14C5.13962 13 5.64768 8.5 7.67987 7C7.27882 6.39155 6.66375 4 7.1718 3.00001C8.18792 3.5 9.55173 4.23944 10.2202 5C12.2524 4 15.3007 4 16.8249 5C17.226 4.18873 18.6968 3.42254 19.3652 3C19.9668 3.60845 19.5323 5.98592 19.3652 7C20.3678 9.19718 20.8894 12.5 15.3007 14C16.1273 14.6688 17.4571 16.2652 18.3819 18.0893C19.0373 19.3821 17.7844 20.5701 16.3571 20.3176C15.3606 20.1413 14.2545 20 13.2685 20C12.0745 20 10.494 20.2071 9.12617 20.4329C7.71155 20.6663 6.56735 19.4472 7.29296 18.2106C7.81974 17.3128 8.48393 16.4725 9.20408 16C8.95342 15.662 7.9605 14.6887 6.15574 15.5C3.89979 16.5141 2.60607 14.2676 3.10739 13"/>
-                </svg>
-              </a>
-            </div>
+        <div class="upper-footer">
+          <div class="social">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/stevenyam33/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" y="30">
+                <g>
+                  <path d="M9.89231 21V13.2538H7V9.94249H9.89231C9.89231 6.42419 9.89231 2.07805 17 3.17198V6.03983C13.9231 5.71462 13.6154 6.66071 13.6154 9.94249H17L16.3231 13.2538H13.6154V21"/>
+              </svg>
+            </a>
+            <!-- Linkedin -->
+            <a href="https://www.linkedin.com/in/steven-yam/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" y="30">
+                <g>
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <!-- Gibhub -->
+            <a href="https://github.com/StevenYam33/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" y="30">
+                <g>
+                  <path d="M11.7444 14C5.13962 13 5.64768 8.5 7.67987 7C7.27882 6.39155 6.66375 4 7.1718 3.00001C8.18792 3.5 9.55173 4.23944 10.2202 5C12.2524 4 15.3007 4 16.8249 5C17.226 4.18873 18.6968 3.42254 19.3652 3C19.9668 3.60845 19.5323 5.98592 19.3652 7C20.3678 9.19718 20.8894 12.5 15.3007 14C16.1273 14.6688 17.4571 16.2652 18.3819 18.0893C19.0373 19.3821 17.7844 20.5701 16.3571 20.3176C15.3606 20.1413 14.2545 20 13.2685 20C12.0745 20 10.494 20.2071 9.12617 20.4329C7.71155 20.6663 6.56735 19.4472 7.29296 18.2106C7.81974 17.3128 8.48393 16.4725 9.20408 16C8.95342 15.662 7.9605 14.6887 6.15574 15.5C3.89979 16.5141 2.60607 14.2676 3.10739 13"/>
+              </svg>
+            </a>
           </div>
-        <!-- </div> -->
+        </div>
         <div class="lower-footer">
           <span>Designed and built by</span>
           <a href="index.html" target="_blank">Steven Yam</a>
