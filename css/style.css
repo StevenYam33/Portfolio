@@ -643,21 +643,25 @@ animation: untype 2000ms steps(var(--word-count)) forwards;
     transition: var(--transition);
 }
 
-.work-description{
+.work-overlay{
     width: 100%;
     height: 100%;
     top: 0;
+    position: absolute;
+    border-radius: 0.5rem;
+    background-color: var(--dark-text-trans);
+    backdrop-filter: blur(2.5px);
+}
+
+.work-description{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 7.5%;
-    border-radius: 0.5rem;
-    position: absolute;
-    backdrop-filter: blur(2.5px);
-    
+    padding: 5%;
     color: var(--accent);
-    background-color: var(--dark-text-trans);
 }
 
 .work-description p{
@@ -948,6 +952,17 @@ footer a{
     .about-pic img{
         margin-top: 1.5rem;
     }
+
+    .work-list{
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .work-description{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 350px) {
@@ -956,6 +971,20 @@ footer a{
     }
     .contact-form-input, .contact-submit-button{
         font-size: 0.85rem;
+    }
+
+    .work-description{
+        justify-content: center;
+    }
+
+    .work-description p,
+    .work-description ul{
+        display: none;
+        visibility: hidden;
+    }
+
+    .work-title{
+        align-self: center;
     }
 }
 
