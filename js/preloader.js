@@ -5,9 +5,9 @@ const preloader = document.querySelector("#preloader");
 
 window.onload = function(){
     setTimeout(function(){
+        preloader.classList.add("hide");
         header.classList.remove("hide");
         home.classList.remove("hide");
         footer.classList.remove("hide");
-        preloader.classList.add("hide");
     }, 2500)
 }

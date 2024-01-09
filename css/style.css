@@ -300,8 +300,8 @@ body[nav-expanded="true"]{
     height: 100svh;
     background-color: var(--text);
     overflow: hidden;
-    animation: 600ms hide linear;
-    animation-delay: 2500ms;
+    animation: 500ms hide linear forwards;
+    animation-delay: 2000ms;
 }
 
 @keyframes hide {
@@ -331,13 +331,13 @@ body[nav-expanded="true"]{
 }
 
 #logo-s{
-    animation: draw 1.25s forwards, 
-    800ms rotate 2200ms ease-in-out;
+    animation: draw 1000ms forwards, 
+    500ms rotate 2000ms ease-in-out forwards;
 }
 
 #logo-y{
-    animation: draw 1s 1.25s forwards, 
-    800ms rotate 2200ms ease-in-out;
+    animation: draw 1000ms 1000ms forwards, 
+    500ms rotate 2000ms ease-in-out forwards;
 }
 
 @keyframes draw {
