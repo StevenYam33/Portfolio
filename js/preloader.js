@@ -9,5 +9,5 @@ window.onload = function(){
         header.classList.remove("hide");
         home.classList.remove("hide");
         footer.classList.remove("hide");
-    }, 2500)
+    }, 2750)
 }
