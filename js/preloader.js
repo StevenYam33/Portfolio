@@ -9,5 +9,5 @@ window.onload = function(){
         home.classList.remove("hide");
         footer.classList.remove("hide");
         preloader.classList.add("hide");
-    }, 3000)
+    }, 2750)
 }
